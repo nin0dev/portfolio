@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nino Berber</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/portfolio/style.css">
 </head>
 <body>
     <nav>
-        <img class="logo" src="./assets/img/NB_logo_black.png" alt="Logo Nino Berber">
+        <img class="logo" src="/portfolio/assets/img/NB_logo_black.png" alt="Logo Nino Berber">
         <div class="nav-links">
             <a class="nav-item selected">Accueil</a>
             <a class="nav-item">Projets</a>
             <a class="nav-item">À propos</a>
         </div>
-        <button class="nav-button">Discutons</button>
+        <button class="nav-button"><a>Discutons</a></button>
+        <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
 
     <main>
@@ -34,44 +38,66 @@
         </section>
         <section class="tools">
             <div class="figma-icon">
-                <img src="./assets/img/figma_logo.png" alt="Figma logo" height="34px">
+                <img src="/portfolio/assets/img/figma_logo.png" alt="Figma logo" height="34px">
                 <p>Figma</p>                  
             </div>
             <div class="html-icon">
-                <img src="./assets/img/html_logo.png" alt="HTML logo" width="35px">
+                <img src="/portfolio/assets/img/html_logo.png" alt="HTML logo" width="35px">
                 <p>HTML5</p>                  
             </div>
             <div class="css-icon">
-                <img src="./assets/img/css_logo.png" alt="CSS logo" width="35px">  
+                <img src="/portfolio/assets/img/css_logo.png" alt="CSS logo" width="35px">  
                 <p>CSS3</p>                  
             </div>
             <div class="wordpress-icon">
-                <img src="./assets/img/wordpress_logo.png" alt="Wordpress logo" width="35px">
+                <img src="/portfolio/assets/img/wordpress_logo.png" alt="Wordpress logo" width="35px">
                 <p>WordPress</p>        
             </div>
         </section>
-        <section class="photo-column">
-            <div class="profile-pic">
-                <img src="./assets/img/Nino Berber.png" alt="Nino Berber's portrait picture">
-            </div>
-        </section>
-        <section class="contact-links">
-            <div class="cv-link">
-                <a href="">Voir CV</a>
-                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>      
-            </div>   
-            <div class="linkedin-link">
-                <a href="https://www.linkedin.com/in/nino-berber/" target="_blank">LinkedIn</a>
-                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>   
-            </div>
-        </section>
+        <div class="double-column">
+            <section class="photo-column">
+                <div class="profile-pic">
+                    <img src="./assets/img/Nino Berber.png" alt="Nino Berber's portrait picture">
+                </div>
+            </section>
+            <section class="contact-links">
+                <div class="cv-link">
+                    <a href="">Voir CV</a>
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>      
+                </div>   
+                <div class="linkedin-link">
+                    <a href="https://www.linkedin.com/in/nino-berber/" target="_blank">LinkedIn</a>
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>   
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <a href="">Mentions légales</a>
     </footer>
+    <script>
+        const burger = document.querySelector(".burger");
+        const navMenu = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            burger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-item");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            burger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+    </script>
 </body>
 </html>

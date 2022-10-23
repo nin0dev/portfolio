@@ -2,9 +2,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Variable';
-    src: url('./assets/fonts/ClashDisplay-Variable.woff2') format('woff2'),
-         url('./assets/fonts/ClashDisplay-Variable.woff') format('woff'),
-         url('./assets/fonts/ClashDisplay-Variable.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Variable.woff2') format('woff2'),
+         url('../fonts/ClashDisplay-Variable.woff') format('woff'),
+         url('../fonts/ClashDisplay-Variable.ttf') format('truetype');
          font-weight: 200 700;
          font-display: swap;
          font-style: normal;
@@ -13,9 +13,9 @@
   
 @font-face {
     font-family: 'ClashDisplay-Extralight';
-    src: url('./assets/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-         url('./assets/fonts/ClashDisplay-Extralight.woff') format('woff'),
-         url('./assets/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+         url('../fonts/ClashDisplay-Extralight.woff') format('woff'),
+         url('../fonts/ClashDisplay-Extralight.ttf') format('truetype');
          font-weight: 200;
          font-display: swap;
          font-style: normal;
@@ -24,9 +24,9 @@
   
 @font-face {
     font-family: 'ClashDisplay-Light';
-    src: url('./assets/fonts/ClashDisplay-Light.woff2') format('woff2'),
-         url('./assets/fonts/ClashDisplay-Light.woff') format('woff'),
-         url('./assets/fonts/ClashDisplay-Light.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Light.woff2') format('woff2'),
+         url('../fonts/ClashDisplay-Light.woff') format('woff'),
+         url('../fonts/ClashDisplay-Light.ttf') format('truetype');
          font-weight: 300;
         font-display: swap;
         font-style: normal;
@@ -35,9 +35,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Regular';
-    src: url('./assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
-            url('./assets/fonts/ClashDisplay-Regular.woff') format('woff'),
-            url('./assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Regular.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Regular.woff') format('woff'),
+            url('../fonts/ClashDisplay-Regular.ttf') format('truetype');
             font-weight: 400;
             font-display: swap;
             font-style: normal;
@@ -46,9 +46,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Medium';
-    src: url('./assets/fonts/ClashDisplay-Medium.woff2') format('woff2'),
-            url('./assets/fonts/ClashDisplay-Medium.woff') format('woff'),
-            url('./assets/fonts/ClashDisplay-Medium.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Medium.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Medium.woff') format('woff'),
+            url('../fonts/ClashDisplay-Medium.ttf') format('truetype');
             font-weight: 500;
             font-display: swap;
             font-style: normal;
@@ -57,9 +57,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Semibold';
-    src: url('./assets/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-            url('./assets/fonts/ClashDisplay-Semibold.woff') format('woff'),
-            url('./assets/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Semibold.woff') format('woff'),
+            url('../fonts/ClashDisplay-Semibold.ttf') format('truetype');
             font-weight: 600;
             font-display: swap;
             font-style: normal;
@@ -68,9 +68,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Bold';
-    src: url('assets/fonts/ClashDisplay-Bold.woff2') format('woff2'),
-            url('./assets/fonts/ClashDisplay-Bold.woff') format('woff'),
-            url('./assets/fonts/ClashDisplay-Bold.ttf') format('truetype');
+    src: url('../fonts/ClashDisplay-Bold.woff2') format('woff2'),
+            url('../fonts/ClashDisplay-Bold.woff') format('woff'),
+            url('../fonts/ClashDisplay-Bold.ttf') format('truetype');
             font-weight: 700;
             font-display: swap;
             font-style: normal;
@@ -166,34 +166,17 @@ nav {
 main {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 1fr 0fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .name-section {
     grid-area: 1 / 1 / 2 / 2;
 }
-.double-column { 
-    grid-area: 1 / 2 / 3 / 3;
-}
-.double-column .contact-links { 
-    background-color: #262626;
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-left: 50px; 
-    height: 225px;
-}
-.tools { 
-    grid-area: 2 / 1 / 3 / 2; 
-    display: flex;
-    background-color: #F1F2EF;
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-    align-items: center;
-    padding-left: 80px;
-}
-
+.double-column .photo-column { grid-area: 1 / 2 / 2 / 3; }
+.double-column .contact-links { grid-area: 2 / 2 / 3 / 3; }
+.tools { grid-area: 2 / 1 / 3 / 2; }
 
 .name-section .titles h1 {
     font-family: 'ClashDisplay-Medium';
@@ -250,6 +233,14 @@ main {
     margin-left: 25px;
 }
 
+.tools {
+    display: flex;
+    background-color: #F1F2EF;
+    max-width: 100%;
+    max-height: 200px;
+    align-items: center;
+    padding-left: 80px;
+}
 
 .figma-icon {
     max-width: 100px;
@@ -281,15 +272,14 @@ main {
     background-color: white;
     box-shadow: 0px 4px 15px -6px rgba(0, 0, 0, 0.15);
     border-radius: 100px;
-    padding-left: 30px;
-    padding-right: 20px;
+    padding: 0 20px;
     margin: 0 20px;
 }
 
 .html-icon p {
     font-family: 'Montserrat', sans-serif;
     font-size: 19px;
-    padding: 0 13px;
+    padding-left: 13px;
 }
 
 .css-icon {
@@ -332,6 +322,15 @@ main {
     padding-left: 13px;
 }
 
+section.contact-links {
+    background-color: #262626;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 50px;
+    height: 100%;
+}
+
 section.contact-links a {
     color: white;
     text-decoration: underline;
@@ -348,7 +347,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: 3 / 1 / 4 / 3;
 }
 
 footer a {
