@@ -137,6 +137,11 @@ nav {
     justify-content: space-between;
 }
 
+.nav-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .nav-links a:not(.selected) {
     font-family: 'ClashDisplay-Regular';
 }
@@ -201,6 +206,7 @@ main {
     font-size: 80px;
     padding-left: 80px;
     margin-bottom: 0;
+    transition: all .2s ease-in-out;
 }
 
 .name-section .buttons .hire-button {
@@ -212,7 +218,15 @@ main {
     border: none;
     margin-left: 80px;
     cursor: pointer;
+    transition: all 0.5s;
 }
+
+.name-section .buttons .hire-button:hover {
+    background: transparent;
+    border: 1px solid #E34F26;
+    color: #E34F26;
+}
+
 
 .name-section .buttons .projects-button {
     color: black;
@@ -222,7 +236,16 @@ main {
     margin-left: 40px;
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    background-color: transparent;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .2s ease-in;
+}
+
+.name-section .buttons .projects-button:hover {
+    background-position: left bottom;
+    color: white;
+    transition: all .3s ease-out;
 }
 
 .profile-pic {
@@ -248,6 +271,7 @@ main {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin-left: 25px;
+    transition: all .2s ease-in-out;
 }
 
 
@@ -345,10 +369,11 @@ section.contact-links a {
 footer {
     background: black;
     height: 50px;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: 3 / 1 / 4 / 3;
+
 }
 
 footer a {
@@ -368,6 +393,12 @@ footer a {
     /* NAVBAR */
     nav {
         padding: 0;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
     }
 
     .nav-links {
@@ -420,6 +451,7 @@ footer a {
     main {
         display: flex;
         flex-direction: column;
+        margin-top: 100px;
     }
 
     .titles {
@@ -451,19 +483,15 @@ footer a {
 
     section.tools {
         order: 3;
-        padding-left: 35px;
-        display: grid;
-        grid-template-columns: repeat(10, 80vw);
-        grid-template-rows: 1fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
+        padding: 20px 35px;
         overflow: scroll;
     }
 
-    .contact-links {
+    .double-column .contact-links {
         order: 1;
         width: 50%;
         flex: 2;
+        height: 362px;
     }
 
     .name-section .buttons .hire-button{
@@ -476,10 +504,6 @@ footer a {
         max-height: 100%;
         align-items: flex-end;
         margin-top: 80px;
-    }
-
-    section.contact-links {
-        
     }
 
     footer {
