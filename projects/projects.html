@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nino Berber</title>
+    <link rel="stylesheet" href="./projects.css">
+</head>
+<body>
+    <nav id="navbar">
+        <img class="logo" src="/portfolio/assets/img/NB_logo_black.png" alt="Logo Nino Berber">
+        <div class="nav-links">
+            <a href="/portfolio/homepage/index.html" class="nav-item">Accueil</a>
+            <a href="/portfolio/projects/projects.html" class="nav-item selected">Projets</a>
+            <a class="nav-item">À propos</a>
+        </div>
+        <button class="nav-button"><a>Discutons</a></button>
+        <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <main>
+        <section class="head-section">
+            <h1>Projets</h1>
+            <div class="filters">
+                <div class="dev-anchor filter">
+                    <a href="#dev">Développement</a>
+                </div>
+                <div class="design-anchor filter">
+                    <a href="#design">Design</a>
+                </div>
+            </div>
+        </section>
+        <section id="dev" class="carousel">
+            <h2 id="carousel-heading">Développement</h2>
+            <div class="slide-wrapper">
+                <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+                <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+                <div class="slides-container" id="slides-container">
+                    <div class="slide">
+                        <img src="/portfolio/assets/img/project1_thumbnail.png" alt="First project thumbnail" width="742">
+                        <div class="slide-content">
+                            <h3>Refonte d’un site</h3>
+                            <p>Ce projet a été réalisé en équipe lors d’une semaine dédiée au développement web à MMI Bordeaux.</p>
+                            <button class="plus-button">
+                                En voir davantage
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>   
+                    <div class="slide">
+                        <img src="/portfolio/assets/img/project1_thumbnail.png" alt="First project thumbnail" width="742">
+                        <div class="slide-content">
+                            <h3>Refonte d’un site</h3>
+                            <p>Ce projet a été réalisé en équipe lors d’une semaine dédiée au développement web à MMI Bordeaux.</p>
+                            <button class="plus-button">
+                                En voir davantage
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+        </section>
+        <section id="design" class="design-section">
+
+        </section>
+    </main>
+    <footer>
+        <a href="">Mentions légales</a>
+    </footer>
+    <script>
+        const burger = document.querySelector(".burger");
+        const navMenu = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            burger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-item");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            burger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+    </script>
+    <script>
+        const slidesContainer = document.getElementById("slides-container");
+        const slide = document.querySelector(".slide");
+        const prevButton = document.getElementById("slide-arrow-prev");
+        const nextButton = document.getElementById("slide-arrow-next");
+
+        nextButton.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft += slideWidth;
+        });
+
+        prevButton.addEventListener("click", () => {
+        const slideWidth = slide.clientWidth;
+        slidesContainer.scrollLeft -= slideWidth;
+        });
+    </script>
+</body>
+</html>
