@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nino Berber</title>
     <link rel="stylesheet" href="./projects.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 <body>
     <nav id="navbar">
@@ -28,19 +29,17 @@
                 <div class="dev-anchor filter">
                     <a href="#dev">Développement</a>
                 </div>
-                <div class="design-anchor filter">
+                <!-- <div class="design-anchor filter">
                     <a href="#design">Design</a>
-                </div>
+                </div> -->
             </div>
         </section>
-        <section id="dev" class="carousel">
+        <section id="dev" class="splide">
             <h2 id="carousel-heading">Développement</h2>
-            <div class="slide-wrapper">
-                <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
-                <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
-                <div class="slides-container" id="slides-container">
-                    <div class="slide">
-                        <img src="/portfolio/assets/img/project1_thumbnail.png" alt="First project thumbnail" width="742">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="/portfolio/assets/img/project1_thumbnail.png" alt="First project thumbnail">
                         <div class="slide-content">
                             <h3>Refonte d’un site</h3>
                             <p>Ce projet a été réalisé en équipe lors d’une semaine dédiée au développement web à MMI Bordeaux.</p>
@@ -51,25 +50,13 @@
                                 </svg>
                             </button>
                         </div>
-                    </div>   
-                    <div class="slide">
-                        <img src="/portfolio/assets/img/project1_thumbnail.png" alt="First project thumbnail" width="742">
-                        <div class="slide-content">
-                            <h3>Refonte d’un site</h3>
-                            <p>Ce projet a été réalisé en équipe lors d’une semaine dédiée au développement web à MMI Bordeaux.</p>
-                            <button class="plus-button">
-                                En voir davantage
-                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>       
-                </div>
+                    </li>
+                </ul>  
             </div>
         </section>
-        <section id="design" class="design-section">
-
+        <section class="bottom-section">
+            <h2>Discutons de votre projet</h2>
+            <a href="mailto:ninberber@gmail.com">ninberber@gmail.com</a>
         </section>
     </main>
     <footer>
@@ -113,21 +100,14 @@
         }
         }
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@1.3.3/dist/js/splide.min.js"></script>
     <script>
-        const slidesContainer = document.getElementById("slides-container");
-        const slide = document.querySelector(".slide");
-        const prevButton = document.getElementById("slide-arrow-prev");
-        const nextButton = document.getElementById("slide-arrow-next");
-
-        nextButton.addEventListener("click", () => {
-        const slideWidth = slide.clientWidth;
-        slidesContainer.scrollLeft += slideWidth;
+        var splide = new Splide( '.splide', {
+            type   : 'loop',
+            padding: '5rem',
+            margin : '5rem',
         });
-
-        prevButton.addEventListener("click", () => {
-        const slideWidth = slide.clientWidth;
-        slidesContainer.scrollLeft -= slideWidth;
-        });
+        splide.mount();
     </script>
 </body>
 </html>
