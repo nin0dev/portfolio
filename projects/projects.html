@@ -10,9 +10,9 @@
 </head>
 <body>
     <nav id="navbar">
-        <a href="/portfolio/homepage/index.html"><img class="logo" src="/portfolio/assets/img/Nino Berber_files/NB_logo_black.png" alt="Logo Nino Berber"></a>
+        <a href="./portfolio/homepage/index.html"><img class="logo" src="/portfolio/assets/img/Nino Berber_files/NB_logo_black.png" alt="Logo Nino Berber"></a>
         <div class="nav-links">
-            <a href="/portfolio/homepage/index.html" class="nav-item">Accueil</a>
+            <a href="/portfolio/index.html" class="nav-item">Accueil</a>
             <a href="/portfolio/projects/projects.html" class="nav-item selected">Projets</a>
             <a href="/portfolio/propos/propos.html" class="nav-item">À propos</a>
         </div>
@@ -58,7 +58,27 @@
         </section>
         <section class="bottom-section">
             <h2>Discutons de votre projet</h2>
-            <a href="mailto:ninberber@gmail.com">ninberber@gmail.com</a>
+            <form id="form" action=”mailto:ninberber@gmail.com” method=”POST” enctype=”text/plain” name=”EmailForm”>
+                <div>
+                    <label for="firstname">Votre prénom</label><br>
+                    <input type="text" id="name" name="firstname" placeholder="Prénom">
+                </div>
+                <div>
+                    <label for="lastname">Votre nom</label><br>
+                    <input type="text" id="name" name="lastname" placeholder="Nom">
+                </div>
+                <div>
+                    <label for="email">Votre adresse e-mail</label>
+                    <input type="email" placeholder="E-mail"> 
+                </div>
+                <div>
+                    <label for="message">Votre message</label><br>
+                    <textarea placeholder="Message" name="contact-message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Envoyer</button>
+                </div>
+            </form>
         </section>
     </main>
     <footer>

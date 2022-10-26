@@ -198,6 +198,26 @@ nav {
 
 
   
+
+
+
+/* BOTTOM */
+.bottom-section {
+    margin: 100px 0 80px 80px;
+}
+
+.bottom-section h2 {
+    font-family: 'ClashDisplay-Medium';
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.bottom-section a {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+}
+
 #form {
     position: relative;
     display: block;
@@ -283,24 +303,6 @@ textarea:hover {
     background-position: left bottom;
     color: white;
     transition: all .3s ease-out;
-}
-
-
-/* BOTTOM */
-.bottom-section {
-    margin: 100px 0 80px 80px;
-}
-
-.bottom-section h2 {
-    font-family: 'ClashDisplay-Medium';
-    font-size: 80px;
-    font-weight: 500;
-}
-
-.bottom-section a {
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
 }
 
 /* FOOTER */
