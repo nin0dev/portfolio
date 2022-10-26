@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
-
-@import url('./assets/fonts/clash-display.css');
+@import url('/portfolio/assets/fonts/clash-display.css');
 
 @font-face {
     font-family: 'ClashDisplay-Variable';
