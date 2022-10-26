@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nino Berber | Projets</title>
+    <link rel="stylesheet" href="./propos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a href="/portfolio/homepage/index.html"><img class="logo" src="/portfolio/assets/img/NB_logo_black.png" alt="Logo Nino Berber"></a>
+        <div class="nav-links">
+            <a href="/portfolio/homepage/index.html" class="nav-item">Accueil</a>
+            <a href="/portfolio/projects/projects.html" class="nav-item">Projets</a>
+            <a href="/portfolio/propos/propos.html" class="nav-item selected">À propos</a>
+        </div>
+        <button class="nav-button"><a>Discutons</a></button>
+        <div class="burger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="propos">
+            <h1>À propos</h1>
+            <p>Franco-canadien passionné par le numérique et le digital, ces domaines m’intéressent depuis très jeune. D’abord par curiosité, puis pour réaliser des projets concrets dans un but précis.
+                Je pratique la natation, et joue de la guitare ainsi que de la batterie.<br>
+                <br>
+                J’ai pu expérimenter à plusieurs reprises le monde professionnel à travers différents postes : en tant que freelance, mais aussi dans le cadre d’un CDD. <br>
+                <br>
+                Je poursuis aujourd’hui des études à l’IUT Bordeaux Montaigne dans le cursus MMI.</p>
+        </section>
+        <section class="bottom-section">
+            <h2>Prenons contact</h2>
+            <form id="form" action=”mailto:ninberber@gmail.com” method=”POST” enctype=”text/plain” name=”EmailForm”>
+                <div>
+                    <label for="firstname">Votre prénom</label><br>
+                    <input type="text" id="name" name="firstname" placeholder="Prénom">
+                </div>
+                <div>
+                    <label for="lastname">Votre nom</label><br>
+                    <input type="text" id="name" name="lastname" placeholder="Nom">
+                </div>
+                <div>
+                    <label for="email">Votre adresse e-mail</label>
+                    <input type="email" placeholder="E-mail"> 
+                </div>
+                <div>
+                    <label for="message">Votre message</label><br>
+                    <textarea placeholder="Message" name="contact-message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <button id="submit" type="submit">Envoyer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="">Mentions légales</a>
+    </footer>
+    <script>
+        const burger = document.querySelector(".burger");
+        const navMenu = document.querySelector(".nav-links");
+
+        burger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            burger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-item");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            burger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {myFunction()};
+
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+    </script>
+</body>
+</html>
