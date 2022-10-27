@@ -141,6 +141,7 @@ nav {
 .nav-item:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: black;
 }
 
 .nav-links a:not(.selected) {
@@ -148,10 +149,12 @@ nav {
     color: black;
 }
 
+
 .selected {
     font-family: 'ClashDisplay-Medium';
     font-weight: 500;
     text-decoration: underline;
+    color: black;
 }
 
 /* Mobile display */
