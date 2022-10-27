@@ -83,6 +83,10 @@ body {
     padding: 0;
 }
 
+a {
+    color: black;
+}
+
 .sub-title p {
     font-family: 'ClashDisplay-Regular';
     font-weight: 400;

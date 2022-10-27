@@ -201,6 +201,11 @@ main {
     padding-left: 80px;
 }
 
+.tools h3 {
+    font-family: 'ClashDisplay-Regular';
+    color: rgb(167, 167, 167);
+    font-size: 20px;
+}
 
 .name-section .titles h1 {
     font-family: 'ClashDisplay-Medium';
@@ -363,7 +368,6 @@ section.contact-links a {
     text-decoration: underline;
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    padding-top: 50px;
 }
 
 
@@ -487,6 +491,10 @@ footer a {
         order: 3;
         padding: 20px 35px;
         overflow: scroll;
+    }
+
+    .tools h3 {
+        display: none;
     }
 
     .double-column .contact-links {
