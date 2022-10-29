@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nino Berber</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav id="navbar">
-        <a href="./index.html"><img class="logo" src="./assets/img/NB_logo_black.png" alt="Logo Nino Berber"></a>
+        <a href="index.html"><img class="logo" src="./assets/img/NB_logo_black.png" alt="Logo Nino Berber"></a>
         <div class="nav-links">
             <a href="#" class="nav-item selected">Accueil</a>
-            <a href="/projects/projects.html" class="nav-item">Projets</a>
-            <a href="/propos/propos.html" class="nav-item">À propos</a>
+            <a href="projects/projects.html" class="nav-item">Projets</a>
+            <a href="propos/propos.html" class="nav-item">À propos</a>
         </div>
-        <a href="/propos/propos.html"><button class="nav-button">Discutons</button></a>
+        <a href="propos/propos.html"><button class="nav-button">Discutons</button></a>
         <div class="burger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -33,37 +33,37 @@
                 </div>
                 <div class="buttons">
                     <a href=""><button class="hire-button">Collaborons</button></a>
-                    <a href="/portfolio/projects/projects.html"><button class="projects-button">Projets</button></a>  
+                    <a href="projects/projects.html"><button class="projects-button">Projets</button></a>  
                 </div>
         </section>
         <section class="tools">
             <h3>Mes outils &nbsp; &nbsp; —</h3>
             <div class="figma-icon">
-                <img src="./assets/img/figma_logo.png" alt="Figma logo" height="34px">
+                <img src="assets/img/figma_logo.png" alt="Figma logo" height="34px">
                 <p>Figma</p>                  
             </div>
             <div class="html-icon">
-                <img src="./assets/img/html_logo.png" alt="HTML logo" width="35px">
+                <img src="assets/img/html_logo.png" alt="HTML logo" width="35px">
                 <p>HTML5</p>                  
             </div>
             <div class="css-icon">
-                <img src="./assets/img/css_logo.png" alt="CSS logo" width="35px">  
+                <img src="assets/img/css_logo.png" alt="CSS logo" width="35px">  
                 <p>CSS3</p>                  
             </div>
             <div class="wordpress-icon">
-                <img src="./assets/img/wordpress_logo.png" alt="Wordpress logo" width="35px">
+                <img src="assets/img/wordpress_logo.png" alt="Wordpress logo" width="35px">
                 <p>WordPress</p>        
             </div>
         </section>
         <div class="double-column">
             <section class="photo-column">
                 <div class="profile-pic">
-                    <img src="./assets/img/Nino Berber.png" alt="Nino Berber's portrait picture">
+                    <img src="assets/img/Nino Berber.png" alt="Nino Berber's portrait picture">
                 </div>
             </section>
             <section class="contact-links">
                 <div class="cv-link">
-                    <a href="/cv-nino-berber.pdf">Voir CV</a>
+                    <a href="cv-nino-berber.pdf">Voir CV</a>
                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M14.3967 10.9601L22.9809 10.9601L22.9809 19.5444M10.9601 22.9809L22.8607 11.0803" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>      
@@ -80,43 +80,6 @@
     <footer>
         <a href="">Mentions légales</a>
     </footer>
-    <script>
-        const burger = document.querySelector(".burger");
-        const navMenu = document.querySelector(".nav-links");
-
-        burger.addEventListener("click", mobileMenu);
-
-        function mobileMenu() {
-            burger.classList.toggle("active");
-            navMenu.classList.toggle("active");
-        }
-
-        const navLink = document.querySelectorAll(".nav-item");
-
-        navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-        function closeMenu() {
-            burger.classList.remove("active");
-            navMenu.classList.remove("active");
-        }
-
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function() {myFunction()};
-
-        // Get the navbar
-        var navbar = document.getElementById("navbar");
-
-        // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
-
-        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
