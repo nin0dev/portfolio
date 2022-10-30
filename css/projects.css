@@ -37,8 +37,8 @@
 @font-face {
     font-family: 'ClashDisplay-Regular';
     src: url('/portfolio/assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
-            url('/portfolio/assets/fonts/ClashDisplay-Regular.woff') format('woff'),
-            url('/portfolio/assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+        url('/portfolio/assets/fonts/ClashDisplay-Regular.woff') format('woff'),
+        url('/portfolio/assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -151,6 +151,9 @@ nav {
 
 .nav-item {
     color: black;
+    font-family: 'ClashDisplay-Regular';
+    font-weight: 400;
+    font-size: 15px;
 }
 
 .nav-item:hover {
@@ -231,7 +234,7 @@ nav {
 }
 
 
-#carousel-heading {
+h2#carousel-heading {
     font-family: 'ClashDisplay-Regular';
     font-weight: 400;
     font-size: 40px;
