@@ -207,7 +207,8 @@ main {
 .tools h3 {
     font-family: 'ClashDisplay-Regular';
     color: rgb(167, 167, 167);
-    font-size: 20px;
+    width: 200px;
+    padding-right: 30px;
 }
 
 .name-section .titles h1 {
@@ -496,19 +497,21 @@ footer a {
         overflow: scroll;
     }
 
-    .tools h3 {
-        display: none;
-    }
-
     .double-column .contact-links {
         order: 1;
         width: 50%;
         flex: 2;
         height: 362px;
+        padding-left: 30px;
     }
 
     .name-section .buttons .hire-button{
         margin-left: 35px;
+    }
+
+    .profile-pic img {
+        height: 400px;
+        margin: 13px 0 0 -30px;
     }
 
     .double-column {
