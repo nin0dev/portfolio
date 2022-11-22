@@ -451,9 +451,9 @@ footer a {
     }
 
     section.propos h1 {
-        margin: 40px 15px 15px 15px;
+        margin: 40px 15px 15px 30px;
         font-size: 65px;
-        text-align: center;
+        text-align: start;
     }
 
 

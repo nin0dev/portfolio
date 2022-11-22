@@ -274,6 +274,10 @@ main {
     align-items: flex-end;
 }
 
+.titles h1 {
+    line-break: normal;
+}
+
 .titles h2 {
     background-color: rgb(61, 52, 139, .9);
     color: white;
@@ -494,7 +498,7 @@ footer a {
     section.tools {
         order: 3;
         padding: 20px 35px;
-        overflow: scroll;
+        overflow-x: scroll;
     }
 
     .double-column .contact-links {
