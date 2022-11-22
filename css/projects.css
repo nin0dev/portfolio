@@ -631,4 +631,11 @@ footer a {
 
     /* SLIDER RESPONSIVENESS */
 
+    .splide__slide a img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: flex;
+        flex-direction: column;
+    }
 }
