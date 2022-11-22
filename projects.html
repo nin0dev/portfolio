@@ -59,23 +59,23 @@
         <section class="bottom-section">
             <h2>Discutons de votre projet</h2>
             <form id="form" action=”mailto:ninberber@gmail.com” method=”POST” enctype=”text/plain” name=”EmailForm”>
-                <div>
+                <div class="input-container">
                     <label for="firstname">Votre prénom</label><br>
                     <input type="text" id="name" name="firstname" placeholder="Prénom">
                 </div>
-                <div>
+                <div class="input-container">
                     <label for="lastname">Votre nom</label><br>
                     <input type="text" id="name" name="lastname" placeholder="Nom">
                 </div>
-                <div class="email-input-container">
+                <div class="input-container email">
                     <label for="email">Votre adresse e-mail</label>
                     <input type="email" placeholder="E-mail"> 
                 </div>
-                <div>
+                <div class="input-container">
                     <label for="message">Votre message</label><br>
                     <textarea placeholder="Message" name="contact-message" id="message" cols="30" rows="10"></textarea>
                 </div>
-                <div>
+                <div class="input-container">
                     <button id="submit" type="submit">Envoyer</button>
                 </div>
             </form>

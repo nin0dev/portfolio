@@ -583,6 +583,26 @@ footer a {
         margin-left: 35px;
     }
 
+    .head-section {
+        margin-left: 30px;
+    }
+
+    h2#carousel-heading {
+        margin-left: 30px;
+    }
+
+    .bottom-section {
+        margin-left: 30px;
+    }
+
+    .bottom-section h2 {
+        font-size: 40px;
+    }
+
+    form#form {
+        width: 380px;
+    }
+
     input {
         width: 320px;
     }
@@ -595,12 +615,20 @@ footer a {
         width: 353px;
     }
 
-    .email-input-container {
+    .email {
         display: flex;
         flex-direction: column;
+    }
+
+    .input-container {
+        width: 320px;
     }
 
     footer {
         width: 100%;
     }
+
+
+    /* SLIDER RESPONSIVENESS */
+
 }

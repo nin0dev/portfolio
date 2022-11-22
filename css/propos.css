@@ -446,10 +446,19 @@ footer a {
         margin-left: 35px;
     }
 
+    section.propos p {
+        margin: 50px 30px;
+    }
+
     section.propos h1 {
-        margin: 15px;
+        margin: 40px 15px 15px 15px;
         font-size: 65px;
         text-align: center;
+    }
+
+
+    .bottom-section {
+        margin: 100px 0 80px 30px;
     }
 
     #form {
