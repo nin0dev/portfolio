@@ -9,7 +9,7 @@
     font-weight: 200 700;
     font-display: swap;
     font-style: normal;
-  }
+}
   
   
 @font-face {
@@ -20,7 +20,7 @@
     font-weight: 200;
     font-display: swap;
     font-style: normal;
-  }
+}
   
   
 @font-face {
@@ -123,13 +123,13 @@ nav {
     border: 1px solid black;
     cursor: pointer;
     padding: 8px 19px;
-    margin-right: 20px;
     font-family: 'ClashDisplay-Medium';
     font-size: 14px;
     background: linear-gradient(to right, black 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .2s ease-in-out;
+    max-width: 110px;
 }
 
 .nav-button:hover {
@@ -186,27 +186,37 @@ nav {
 }
 
 /* MAIN STYLES */
-.slide-content img {
-    width: 100px;
-} 
+.cards-section {
+    display: flex; 
+    margin: 80px;
+}
 
-.splide__track {
-    background-color: #F1F2EF;
+.two {
+    margin: 0 20px;
+}
+
+.project-card {
+    height: 500px;
+    width: 40%;
+    border: 1px solid black;
     padding: 20px;
 }
 
-.splide__slide {
-    display: flex;
+.project-card h3 {
+    font-family: 'ClashDisplay-Regular';
 }
 
-.splide__slide img {
-    width: 700px;
-    padding: 30px;
+.project-card p {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.slide-content button {
+.project-card img {
+    width: 100%;
+}
+
+.project-card button {
     cursor: pointer;
-    border: 2px solid black;
+    border: 1px solid black;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
@@ -215,28 +225,16 @@ nav {
     background-color: transparent;
 }
 
-.slide-content h3 {
+.project-card button svg {
+    width: 34px;
+    height: 34px;
+    fill: none;
+}
+
+.projects-heading {
     font-family: 'ClashDisplay-Medium';
     font-weight: 500;
-    font-size: 30px;
-}
-
-.slide-content p {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.slide-content {
-    display: flex;
-    flex-direction: column;
-    margin: 0 25px;
-    width: 350px;
-}
-
-
-h2#carousel-heading {
-    font-family: 'ClashDisplay-Regular';
-    font-weight: 400;
-    font-size: 40px;
+    font-size: 80px;
     margin: 80px 0 35px 80px;
 }
 
@@ -277,7 +275,7 @@ h2#carousel-heading {
 
 /* BOTTOM */
 .bottom-section {
-    margin: 100px 0 80px 80px;
+    margin: 100px 75px 80px 80px;
 }
 
 .bottom-section h2 {
@@ -297,7 +295,7 @@ h2#carousel-heading {
     position: relative;
     display: block;
     width: 500px;
-    margin: 50px auto 100px auto;
+    margin: 50px 0 100px 10px;
 }
 
 label {
@@ -393,57 +391,6 @@ footer {
 
 }
 
-/* CAROUSEL SLIDER */ 
-.slider {
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    position: relative;
-    /* overflow: hidden; */
-  }
-  
-  .slide {
-    width: 100%;
-    max-width: 800px;
-    height: 350px;
-    position: absolute;
-    transition: all 0.5s;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .btn {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    padding: 10px;
-    border: none;
-    border-radius: 50%;
-    z-index: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    font-size: 18px;
-  }
-  
-  .btn:active {
-    transform: scale(1.1);
-  }
-  
-  .btn-prev {
-    top: 45%;
-    left: 2%;
-  }
-  
-  .btn-next {
-    top: 45%;
-    right: 2%;
-  }
-
-
 footer a {
     color: white;
     text-decoration: underline;
@@ -506,22 +453,18 @@ footer a {
         margin-left: 35px;
     }
 
+    .cards-section {
+        flex-wrap: wrap;
+        margin-left: 20px;
+    }
+
+    .project-card {
+        min-width: 200px;
+        max-height: 400px;
+    }
+
     footer {
         width: 100%;
-    }
-
-    .slide {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .slide img {
-        width: 500px;
-    }
-    
-    .slide-wrapper {
-        display: block;
-        width: 500px;
     }
 }
 
@@ -587,16 +530,22 @@ footer a {
         margin-left: 30px;
     }
 
-    h2#carousel-heading {
-        margin-left: 30px;
+    h2.projects-heading {
+        margin-left: 20px;
+    }
+
+    .project-card {
+        margin: 20px;
+        width: 80%;
     }
 
     .bottom-section {
-        margin-left: 30px;
+        margin-left: 0;
     }
 
     .bottom-section h2 {
         font-size: 40px;
+        margin: 20px;
     }
 
     form#form {
@@ -626,16 +575,5 @@ footer a {
 
     footer {
         width: 100%;
-    }
-
-
-    /* SLIDER RESPONSIVENESS */
-
-    .splide__slide a img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: flex;
-        flex-direction: column;
     }
 }

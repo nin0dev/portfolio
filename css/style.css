@@ -265,8 +265,9 @@ main {
 }
 
 .profile-pic img {
-    height: 412px;
+    height: 370px;
     object-fit: fill;
+    margin-bottom: -400px;
 }
 
 .titles {
@@ -289,6 +290,9 @@ main {
     transition: all .2s ease-in-out;
 }
 
+.tools h3 {
+    font-family: 'ClashDisplay-Regular';
+}
 
 .figma-icon {
     max-width: 100px;
