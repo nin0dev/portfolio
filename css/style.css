@@ -391,7 +391,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 footer a {
@@ -399,11 +398,142 @@ footer a {
     text-decoration: underline;
 }
 
-/* TABLET 
-@media only screen and (max-width: 900px) {
-    
+/* TABLET */
+@media only screen and (max-width: 1150px) {
+    section.tools {
+        width: 780px;
+        overflow-x: scroll;
+    }
 }
-*/ 
+
+/* TABLET + MOBILE */
+@media only screen and (max-width: 1100px) {
+    /* NAVBAR */
+    nav {
+        padding: 0;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        left: -15px;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .nav-item {
+        padding: 20px 0;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 35px;
+
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(2) {
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-left: 35px;
+    }
+
+
+    /* MAIN */
+    main {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        order: 0;
+    }
+
+    main .name-section .titles h1 {
+        line-height: 4rem;
+        font-size: 65px;
+        padding-left: 35px;
+    }
+
+    .titles h2 {
+        margin-left: 35px;
+    }
+
+    .name-section .sub-title p {
+        width: 85%;
+        padding-left: 35px;
+    }
+
+    .photo-column {
+        order: 1;
+        width: 52.5%;
+    }
+
+    section.tools {
+        order: 3;
+        padding: 20px 35px;
+        overflow-x: scroll;
+    }
+
+    .double-column .contact-links {
+        order: 1;
+        width: 50%;
+        flex: 2;
+        height: 362px;
+        padding-left: 30px;
+    }
+
+    .name-section .buttons .hire-button{
+        margin-left: 35px;
+    }
+
+    .profile-pic img {
+        height: 400px;
+        margin: 13px 0 0 -30px;
+    }
+
+    .double-column {
+        display: flex;
+        flex-direction: row;
+        max-height: 100%;
+        align-items: flex-end;
+        margin-top: 80px;
+    }
+
+    footer {
+        width: 100%;
+    }
+}
 
 /* MOBILE */ 
 @media only screen and (max-width: 768px) {
