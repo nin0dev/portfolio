@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+@import url('/assets/fonts/clash-display.css');
+
+@font-face {
+    font-family: 'ClashDisplay-Variable';
+    src: url('/portfolio/assets/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+         url('/portfolio/assets/fonts/ClashDisplay-Variable.woff') format('woff'),
+         url('/portfolio/assets/fonts/ClashDisplay-Variable.ttf') format('truetype');
+    font-weight: 200 700;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  
+@font-face {
+    font-family: 'ClashDisplay-Extralight';
+    src: url('/portfolio/assets/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+         url('/portfolio/assets/fonts/ClashDisplay-Extralight.woff') format('woff'),
+         url('/portfolio/assets/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-display: swap;
+    font-style: normal;
+  }
+  
+  
+@font-face {
+    font-family: 'ClashDisplay-Light';
+    src: url('/portfolio/assets/fonts/ClashDisplay-Light.woff2') format('woff2'),
+         url('/portfolio/assets/fonts/ClashDisplay-Light.woff') format('woff'),
+         url('/portfolio/assets/fonts/ClashDisplay-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ClashDisplay-Regular';
+    src: url('/portfolio/assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+            url('/portfolio/assets/fonts/ClashDisplay-Regular.woff') format('woff'),
+            url('/portfolio/assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ClashDisplay-Medium';
+    src: url('/portfolio/assets/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+            url('/portfolio/assets/fonts/ClashDisplay-Medium.woff') format('woff'),
+            url('/portfolio/assets/fonts/ClashDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ClashDisplay-Semibold';
+    src: url('/portfolio/assets/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+            url('/portfolio/assets/fonts/ClashDisplay-Semibold.woff') format('woff'),
+            url('/portfolio/assets/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ClashDisplay-Bold';
+    src: url('assets/fonts/ClashDisplay-Bold.woff2') format('woff2'),
+            url('/portfolio/assets/fonts/ClashDisplay-Bold.woff') format('woff'),
+            url('/portfolio/assets/fonts/ClashDisplay-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sub-title p {
+    font-family: 'ClashDisplay-Regular';
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 80px;
+    width: 745px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* NAVBAR STYLES */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 80px;
+    background-color: white;
+    border-bottom: 1px solid #000000;
+    z-index: 999;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 90%;
+}
+
+.nav-button {
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 8px 19px;
+    margin-right: 20px;
+    font-family: 'ClashDisplay-Medium';
+    font-size: 14px;
+    background: linear-gradient(to right, black 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .2s ease-in-out;
+}
+
+.nav-button:hover {
+    background-position: left bottom;
+    color: white;
+    transition: all .3s ease-out;
+}
+
+.logo {
+    width: 45px;
+}
+
+.nav-links {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    color: black;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav-links a:not(.selected) {
+    font-family: 'ClashDisplay-Regular';
+}
+
+.selected {
+    font-family: 'ClashDisplay-Medium';
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+/* Mobile display */
+.burger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+
+/* MAIN STYLES */
+.container {
+    display: flex;
+    margin: 90px 80px;
+}
+
+.container img {
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+.text {
+    max-width: 500px;
+}
+
+h2 {
+    font-family: 'ClashDisplay-Regular';
+    font-weight: 600;
+    font-size: 60px;
+    margin: 120px 0 0 80px;
+}
+
+.text p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text p a {
+    color: black;
+    font-weight: 700;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background: black;
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* TABLET */ 
+@media only screen and (max-width: 1023px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* MOBILE */ 
+@media only screen and (max-width: 768px) {
+
+    /* NAVBAR */
+    nav {
+        padding: 0;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        left: -15px;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .nav-item {
+        padding: 20px 0;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 35px;
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(2) {
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-left: 35px;
+    }
+
+    /* MAIN STYLES */ 
+    h2 {
+        margin-right: 20px;
+    }
+
+    .container {
+        margin: 60px 50px;
+    }
+
+    /* BOTTOM */
+    footer {
+        width: 100%;
+    }
+}
