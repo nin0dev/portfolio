@@ -205,6 +205,24 @@ h2 {
     font-weight: 700;
 }
 
+.row-one {
+    display: flex;
+    justify-content: center;
+}
+
+.row-one img {
+    margin: 20px;
+}
+
+.row-two {
+    display: flex;
+    justify-content: center;
+}
+
+.row-two img {
+    margin: 20px;
+}
+
 
 
 /* FOOTER */
@@ -223,6 +241,8 @@ footer a {
     text-decoration: underline;
 }
 
+
+
 /* TABLET */ 
 @media only screen and (max-width: 1023px) {
     .container {
@@ -232,6 +252,28 @@ footer a {
     .container img {
         width: 100%;
         height: 100%;
+    }
+
+    .row-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row-one img {
+        margin: 20px;
+    }
+    
+    .row-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row-two img {
+        margin: 20px;
     }
 }
 
