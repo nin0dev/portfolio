@@ -401,7 +401,6 @@ footer a {
 /* TABLET */
 @media only screen and (max-width: 1150px) {
     section.tools {
-        width: 780px;
         overflow-x: scroll;
     }
 }
@@ -631,8 +630,9 @@ footer a {
 
     section.tools {
         order: 3;
-        padding: 20px 35px;
         overflow-x: scroll;
+        min-width: 80%;
+        max-width: 100%;
     }
 
     .double-column .contact-links {
