@@ -186,7 +186,7 @@ nav {
 }
 
 .text {
-    max-width: 500px;
+    width: 100%;
 }
 
 h2 {
@@ -245,6 +245,9 @@ footer a {
 
 /* TABLET */ 
 @media only screen and (max-width: 1023px) {
+
+
+
     .container {
         flex-direction: column;
     }
@@ -262,8 +265,9 @@ footer a {
     }
     
     .row-one img {
-        margin: 20px;
+        margin: 15px 0;
     }
+    
     
     .row-two {
         display: flex;
@@ -273,8 +277,19 @@ footer a {
     }
     
     .row-two img {
-        margin: 20px;
+        margin: 15px 0;
     }
+
+    video {
+        width: 100%    !important;
+        height: auto   !important;
+    }
+
+    .img-gallery .row-one img, .img-gallery .row-two img {
+        width: 80%    !important;
+        height: auto   !important;
+    }
+
 }
 
 /* MOBILE */ 
