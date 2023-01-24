@@ -3,9 +3,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Variable';
-    src: url('/portfolio/assets/fonts/ClashDisplay-Variable.woff2') format('woff2'),
-         url('/portfolio/assets/fonts/ClashDisplay-Variable.woff') format('woff'),
-         url('/portfolio/assets/fonts/ClashDisplay-Variable.ttf') format('truetype');
+    src: url('./assets/fonts/ClashDisplay-Variable.woff2') format('woff2'),
+         url('./assets/fonts/ClashDisplay-Variable.woff') format('woff'),
+         url('./assets/fonts/ClashDisplay-Variable.ttf') format('truetype');
     font-weight: 200 700;
     font-display: swap;
     font-style: normal;
@@ -14,9 +14,9 @@
   
 @font-face {
     font-family: 'ClashDisplay-Extralight';
-    src: url('/portfolio/assets/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-         url('/portfolio/assets/fonts/ClashDisplay-Extralight.woff') format('woff'),
-         url('/portfolio/assets/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+    src: url('./assets/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
+         url('./assets/fonts/ClashDisplay-Extralight.woff') format('woff'),
+         url('./assets/fonts/ClashDisplay-Extralight.ttf') format('truetype');
     font-weight: 200;
     font-display: swap;
     font-style: normal;
@@ -25,9 +25,9 @@
   
 @font-face {
     font-family: 'ClashDisplay-Light';
-    src: url('/portfolio/assets/fonts/ClashDisplay-Light.woff2') format('woff2'),
-         url('/portfolio/assets/fonts/ClashDisplay-Light.woff') format('woff'),
-         url('/portfolio/assets/fonts/ClashDisplay-Light.ttf') format('truetype');
+    src: url('./assets/fonts/ClashDisplay-Light.woff2') format('woff2'),
+         url('./assets/fonts/ClashDisplay-Light.woff') format('woff'),
+         url('./assets/fonts/ClashDisplay-Light.ttf') format('truetype');
     font-weight: 300;
     font-display: swap;
     font-style: normal;
@@ -36,9 +36,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Regular';
-    src: url('/portfolio/assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
-            url('/portfolio/assets/fonts/ClashDisplay-Regular.woff') format('woff'),
-            url('/portfolio/assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
+            url('./assets/fonts/ClashDisplay-Regular.woff') format('woff'),
+            url('./assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -47,9 +47,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Medium';
-    src: url('/portfolio/assets/fonts/ClashDisplay-Medium.woff2') format('woff2'),
-            url('/portfolio/assets/fonts/ClashDisplay-Medium.woff') format('woff'),
-            url('/portfolio/assets/fonts/ClashDisplay-Medium.ttf') format('truetype');
+    src: url('./assets/fonts/ClashDisplay-Medium.woff2') format('woff2'),
+            url('./assets/fonts/ClashDisplay-Medium.woff') format('woff'),
+            url('./assets/fonts/ClashDisplay-Medium.ttf') format('truetype');
     font-weight: 500;
     font-display: swap;
     font-style: normal;
@@ -58,9 +58,9 @@
 
 @font-face {
     font-family: 'ClashDisplay-Semibold';
-    src: url('/portfolio/assets/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-            url('/portfolio/assets/fonts/ClashDisplay-Semibold.woff') format('woff'),
-            url('/portfolio/assets/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+    src: url('./assets/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
+            url('./assets/fonts/ClashDisplay-Semibold.woff') format('woff'),
+            url('./assets/fonts/ClashDisplay-Semibold.ttf') format('truetype');
     font-weight: 600;
     font-display: swap;
     font-style: normal;
@@ -70,8 +70,8 @@
 @font-face {
     font-family: 'ClashDisplay-Bold';
     src: url('assets/fonts/ClashDisplay-Bold.woff2') format('woff2'),
-            url('/portfolio/assets/fonts/ClashDisplay-Bold.woff') format('woff'),
-            url('/portfolio/assets/fonts/ClashDisplay-Bold.ttf') format('truetype');
+            url('./assets/fonts/ClashDisplay-Bold.woff') format('woff'),
+            url('./assets/fonts/ClashDisplay-Bold.ttf') format('truetype');
     font-weight: 700;
     font-display: swap;
     font-style: normal;
@@ -106,20 +106,14 @@ nav {
     padding: 0 80px;
     background-color: white;
     border-bottom: 1px solid #000000;
-    z-index: 999;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 90%;
-}
 
 .nav-button {
     border: 1px solid black;
     cursor: pointer;
     padding: 8px 19px;
-    margin-right: 20px;
+    margin-left: 40px;
     font-family: 'ClashDisplay-Medium';
     font-size: 14px;
     background: linear-gradient(to right, black 50%, white 50%);
@@ -144,23 +138,23 @@ nav {
     justify-content: space-between;
 }
 
-.nav-item {
-    color: black;
-}
-
 .nav-item:hover {
     text-decoration: underline;
     cursor: pointer;
+    color: black;
 }
 
 .nav-links a:not(.selected) {
     font-family: 'ClashDisplay-Regular';
+    color: black;
 }
+
 
 .selected {
     font-family: 'ClashDisplay-Medium';
     font-weight: 500;
     text-decoration: underline;
+    color: black;
 }
 
 /* Mobile display */
@@ -179,66 +173,65 @@ nav {
 }
 
 
-/* MAIN STYLES */
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-}
 
-.main h1 {
-    font-family: 'ClashDisplay-Medium';
-    font-size: 100px;
-    font-weight: 400;
-    margin: 100px 0 0 0;
-}
 
-.main p {
-    font-family: 'ClashDisplay-Regular';
-    font-size: 30px;
-    margin: 0;
-}
+/* TABLET + MOBILE */
+@media only screen and (max-width: 1100px) {
+    /* NAVBAR */
+    nav {
+        padding: 0;
+    }
 
-.main button {
-    border: 1px solid black;
-    cursor: pointer;
-    padding: 8px 19px;
-    margin-top: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    background: linear-gradient(to right, black 50%, white 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .2s ease-in-out;
-}
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
-.main button:hover {
-    background-position: left bottom;
-    color: white;
-    transition: all .3s ease-out;
-}
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
 
-/* FOOTER */
-footer {
-    background: black;
-    height: 50px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
+    .nav-links.active {
+        left: -15px;
+        max-width: 100%;
+        padding: 20px;
+    }
 
-footer a {
-    color: white;
-    text-decoration: underline;
-}
+    .nav-item {
+        padding: 20px 0;
+    }
 
-/* TABLET */ 
-@media only screen and (max-width: 900px) {
+    .nav-button {
+        display: none;
+    }
 
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 35px;
+
+    }
+
+    .burger.active .bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .burger.active .bar:nth-child(2) {
+        transform: translateY(0px) rotate(-45deg);
+    }
+
+    .logo {
+        margin-left: 35px;
+    }
 }
 
 /* MOBILE */ 
@@ -297,9 +290,5 @@ footer a {
 
     .logo {
         margin-left: 35px;
-    }
-
-    footer {
-        width: 100%;
     }
 }
