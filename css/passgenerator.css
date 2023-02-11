@@ -9,7 +9,7 @@
     font-weight: 200 700;
     font-display: swap;
     font-style: normal;
-}
+  }
   
   
 @font-face {
@@ -20,7 +20,7 @@
     font-weight: 200;
     font-display: swap;
     font-style: normal;
-}
+  }
   
   
 @font-face {
@@ -37,8 +37,8 @@
 @font-face {
     font-family: 'ClashDisplay-Regular';
     src: url('/portfolio/assets/fonts/ClashDisplay-Regular.woff2') format('woff2'),
-        url('/portfolio/assets/fonts/ClashDisplay-Regular.woff') format('woff'),
-        url('/portfolio/assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+            url('/portfolio/assets/fonts/ClashDisplay-Regular.woff') format('woff'),
+            url('/portfolio/assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -77,22 +77,9 @@
     font-style: normal;
 }
 
-
 body {
     margin: 0;
     padding: 0;
-}
-
-a {
-    color: black;
-}
-
-.sub-title p {
-    font-family: 'ClashDisplay-Regular';
-    font-weight: 400;
-    font-size: 22px;
-    padding-left: 80px;
-    width: 745px;
 }
 
 footer a {
@@ -115,21 +102,22 @@ nav {
 }
 
 .sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 90%;
 }
 
 .nav-button {
     border: 1px solid black;
     cursor: pointer;
     padding: 8px 19px;
+    margin-right: 20px;
     font-family: 'ClashDisplay-Medium';
     font-size: 14px;
     background: linear-gradient(to right, black 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .2s ease-in-out;
-    max-width: 110px;
 }
 
 .nav-button:hover {
@@ -150,9 +138,6 @@ nav {
 
 .nav-item {
     color: black;
-    font-family: 'ClashDisplay-Regular';
-    font-weight: 400;
-    font-size: 15px;
 }
 
 .nav-item:hover {
@@ -185,108 +170,54 @@ nav {
     background-color: #101010;
 }
 
+
 /* MAIN STYLES */
-.cards-section {
-    display: flex; 
-    margin: 60px;
-    flex-wrap: wrap;
-    justify-content: center;
+.container {
+    display: flex;
+    margin: 90px 80px;
 }
 
-.project-card {
-    height: 455px;
-    width: 35%;
-    border: 1px solid black;
-    padding: 30px;
-    margin: 0 15px 20px 15px;
+.container img {
+    width: 50%;
 }
 
-.project-card h3 {
-    font-family: 'ClashDisplay-Regular';
-}
-
-.project-card p {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.project-card img {
+.text {
     width: 100%;
+    margin-left: 30px;
 }
 
-.project-card button {
-    cursor: pointer;
-    border: 1px solid black;
+h2 {
+    font-family: 'ClashDisplay-Regular';
+    font-weight: 600;
+    font-size: 60px;
+    margin: 120px 0 0 80px;
+}
+
+.text p {
     font-family: 'Montserrat', sans-serif;
+}
+
+.text p a {
+    color: black;
+    font-weight: 700;
+}
+
+.row-one {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 200px;
-    background-color: transparent;
 }
 
-.project-card button svg {
-    width: 34px;
-    height: 34px;
-    fill: none;
+.row-one img {
+    margin: 20px;
 }
 
-.projects-heading {
-    font-family: 'ClashDisplay-Medium';
-    font-weight: 500;
-    font-size: 80px;
-    margin: 80px 0 35px 80px;
-}
-
-.head-section {
-    margin: 100px 0 0 80px;
-}
-
-.head-section h1 {
-    font-family: 'ClashDisplay-Medium';
-    font-weight: 500;
-    font-size: 80px;
-}
-
-.filters {
+.row-two {
     display: flex;
+    justify-content: center;
 }
 
-.filter a {
-    padding: 15px;
-    border: 2px solid black;
-    margin-right: 35px;
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-    text-decoration: none;
-    background: linear-gradient(to right, black 50%, white 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .2s ease-in-out;
-}
-
-.filter a:hover {
-    padding: 15px;
-    background-position: left bottom;
-    color: white;
-    transition: all .3s ease-out;
-}
-
-
-/* BOTTOM */
-.bottom-section {
-    margin: 100px 75px 80px 80px;
-}
-
-.bottom-section h2 {
-    font-family: 'ClashDisplay-Medium';
-    font-size: 80px;
-    font-weight: 500;
-}
-
-.bottom-section a {
-    color: black;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+.row-two img {
+    margin: 20px;
 }
 
 
@@ -307,79 +238,29 @@ footer a {
 }
 
 
-/* TABLET */
-@media only screen and (max-width: 800px) {
-    nav {
-        padding: 0;
-    }
+/* TABLET */ 
+@media only screen and (max-width: 1023px) {
 
-    .sticky {
-        position: sticky;
-        top: 0;
-        width: 100%;
-    }
-
-    .nav-links {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
+    .container {
         flex-direction: column;
-        background-color: #fff;
+    }
+
+    .container img {
         width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        height: 100%;
     }
 
-    .nav-links.active {
-        left: -15px;
-        max-width: 100%;
-        padding: 20px;
+    .row-one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .row-one img {
+        margin: 15px 0;
     }
 
-    .nav-item {
-        padding: 20px 0;
-    }
-
-    .nav-button {
-        display: none;
-    }
-
-    .burger {
-        display: block;
-        cursor: pointer;
-        margin-right: 35px;
-    }
-
-    .burger.active .bar:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
-    }
-
-    .burger.active .bar:nth-child(2) {
-        transform: translateY(0px) rotate(-45deg);
-    }
-
-    .logo {
-        margin-left: 35px;
-    }
-
-    .cards-section {
-        flex-wrap: wrap;
-    }
-
-    .project-card {
-        min-width: 200px;
-        max-height: 400px;
-        margin-top: 20px;
-    }
-
-    .project-card img {
-        width: 80%;
-    }
-
-    footer {
-        width: 100%;
-    }
 }
 
 /* MOBILE */ 
@@ -391,7 +272,7 @@ footer a {
     }
 
     .sticky {
-        position: sticky;
+        position: fixed;
         top: 0;
         width: 100%;
     }
@@ -440,25 +321,20 @@ footer a {
         margin-left: 35px;
     }
 
-    .head-section {
-        margin-left: 30px;
+    /* MAIN STYLES */ 
+    h2 {
+        margin-right: 20px;
     }
 
-    h2.projects-heading {
-        margin-left: 20px;
+    .container {
+        margin: 60px 50px;
     }
 
-    .project-card {
-        margin: 20px;
-        width: 80%;
+    .text {
+        margin-left: 0;
     }
 
-
-    .bottom-section h2 {
-        font-size: 40px;
-        margin: 20px 20px 20px 0;
-    }
-
+    /* BOTTOM */
     footer {
         width: 100%;
     }
