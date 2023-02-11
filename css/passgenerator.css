@@ -250,6 +250,10 @@ footer a {
         height: 100%;
     }
 
+    h2 {
+        margin-left: 50px; 
+    }
+
     .row-one {
         display: flex;
         flex-direction: column;
@@ -322,9 +326,6 @@ footer a {
     }
 
     /* MAIN STYLES */ 
-    h2 {
-        margin-right: 20px;
-    }
 
     .container {
         margin: 60px 50px;
