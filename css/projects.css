@@ -201,6 +201,10 @@ nav {
     margin: 0 15px 20px 15px;
 }
 
+.project-card h2 {
+    font-family:'ClashDisplay-Regular';
+}
+
 .project-card h3 {
     font-family: 'ClashDisplay-Regular';
 }
@@ -228,6 +232,10 @@ nav {
     width: 34px;
     height: 34px;
     fill: none;
+}
+
+.four {
+    height: 200px;
 }
 
 .projects-heading {
