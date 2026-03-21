@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Druk Text Trial';
+  font-style: bold;
+  font-weight: 700;
+  src:
+    local('Druk Text Bold Trial'),
+    url('/src/assets/fonts/DrukText-Bold-Trial.woff') format('woff2'),
+    url('/src/assets/fonts/DrukText-Bold-Trial.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NohemiBlack';
+  src:
+    url('/src/assets/fonts/Nohemi-Light.woff2') format('woff2'),
+    url('/src/assets/fonts/Nohemi-Light.otf') format('opentype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
