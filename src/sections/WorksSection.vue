@@ -12,7 +12,7 @@ const works = [
         category: 'Development',
         tech: 'Next.js',
         image: '/src/assets/images/crm-project_thumb.png',
-        link: '#',
+        link: '/projects/reflexprod-crm',
     },
     {
         id: 2,
@@ -20,7 +20,7 @@ const works = [
         category: 'Development',
         tech: 'HTML / CSS / JS',
         image: '/src/assets/images/product-project_thumb.png',
-        link: '#',
+        link: '/projects/fictional-product-showcase',
     },
 ]
 
@@ -96,7 +96,7 @@ onUnmounted(() => {
             </div>
         </div>
         <div class="works__grid">
-            <a v-for="work in works" :key="work.id" :href="work.link" class="works__item">
+            <RouterLink v-for="work in works" :key="work.id" :to="work.link" class="works__item">
                 <div class="works__image-wrapper">
                     <img :src="work.image" :alt="work.title" class="works__image" />
                 </div>
@@ -111,7 +111,7 @@ onUnmounted(() => {
                         <span class="works__meta-tag works__meta-tag--outline">{{ work.tech }}</span>
                     </div>
                 </div>
-            </a>
+            </RouterLink>
         </div>
     </section>
 </template>
