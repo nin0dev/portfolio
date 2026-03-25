@@ -1,4 +1,9 @@
 body {
-  margin: 0 40px;
+  margin: 0;
   background: linear-gradient(#161616, #00022e);
+}
+
+nav,
+main {
+  padding: 0 40px;
 }

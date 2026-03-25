@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
+import { VueLenis } from 'lenis/vue'
 import App from './App.vue'
-import '@/assets/css/main.css'
-import '@/assets/css/fonts.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.component('VueLenis', VueLenis)
+app.mount('#app')

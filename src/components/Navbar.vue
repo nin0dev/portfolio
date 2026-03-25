@@ -6,7 +6,7 @@ const { formattedTime } = displayTime()
 </script>
 
 <template>
-    <nav>
+    <nav class="navbar">
         <p>{{ formattedTime }} EST</p>
         <ul class="nav__list">
             <li><a href="/#about">About</a></li>
