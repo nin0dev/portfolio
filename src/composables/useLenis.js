@@ -1,16 +1,25 @@
-import { useLenis as useVueLenis } from 'lenis/vue'
-import { watch } from 'vue'
-import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { onMounted, onUnmounted } from 'vue'
+import Lenis from 'lenis'
 
-gsap.registerPlugin(ScrollTrigger)
+let lenis
 
 export function useLenis() {
-  const lenis = useVueLenis()
+  onMounted(() => {
+    lenis = new Lenis()
 
-  watch(lenis, (instance) => {
-    if (instance) {
-      instance.on('scroll', ScrollTrigger.update)
+    lenis.on('scroll', ScrollTrigger.update)
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
     }
+
+    requestAnimationFrame(raf)
+  })
+
+  onUnmounted(() => {
+    lenis?.off('scroll', ScrollTrigger.update)
+    lenis?.destroy()
   })
 }

@@ -1,17 +1,65 @@
-<script setup></script>
+<script setup>
+import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import gsap from 'gsap'
+import { SplitText } from 'gsap/SplitText'
+
+gsap.registerPlugin(SplitText)
+
+const heroRef = ref(null)
+let ctx
+
+onMounted(async () => {
+    await document.fonts.ready
+    await nextTick()
+
+    ctx = gsap.context(() => {
+        const split = new SplitText('.hero__title-top, .hero__title-bottom', {
+            type: 'lines',
+            mask: 'lines',
+        })
+
+        gsap.from(split.lines, {
+            yPercent: 100,
+            duration: 1,
+            ease: 'power4.out',
+            stagger: 0.1,
+            delay: 0.2,
+        })
+    }, heroRef.value)
+
+    ctx = gsap.context(() => {
+        const split = new SplitText('.hero__info--desc, .hero__info--skills, .hero__info--location', {
+            type: 'lines',
+            mask: 'lines',
+        })
+
+        gsap.from(split.lines, {
+            xPercent: -60,
+            duration: .9,
+            ease: 'power4.out',
+            stagger: 0.1,
+            delay: 0.2,
+        })
+    })
+
+})
+
+onUnmounted(() => {
+    if (ctx) ctx.revert()
+})
+</script>
 
 <template>
     <header class="hero">
         <div class="hero__grid">
-            <div class="hero__image-wrapper">
+            <div class="hero__image-wrapper" ref="imageWrapperRef">
                 <div class="hero__image"></div>
             </div>
 
             <h2 class="hero__title-top">Front-End</h2>
 
-            <h2 class="hero__title-bottom"><span>Web</span> Developer</h2>
+            <h2 class="hero__title-bottom"><b>Web </b>Developer</h2>
 
-            <span class="hero__info hero__info--date">From 2013</span>
             <span class="hero__info hero__info--desc">
                 Freelance interactive developer.<br>
                 I build handcrafted websites<br>
@@ -25,7 +73,6 @@
                 Shopify
             </span>
             <span class="hero__info hero__info--location">Based in Montreal</span>
-
         </div>
     </header>
 </template>
@@ -69,9 +116,10 @@ h2 {
     line-height: .87;
     letter-spacing: -0.05em;
     min-width: 0;
+    white-space: nowrap;
 }
 
-h2 span {
+h2 b {
     color: #FF4D00;
 }
 
@@ -79,13 +127,15 @@ h2 span {
     grid-column: 2 / 4;
     grid-row: 1;
     display: flex;
+    align-items: flex-end;
     min-width: 0;
 }
 
 .hero__image {
     width: 100%;
-    height: 100%;
-    background-image: url('/src/assets/images/crm-project_thumb.png');
+    font-size: 10vw;
+    height: 0.75em;
+    background-image: url('/src/assets/images/background.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -102,7 +152,7 @@ h2 span {
 }
 
 .hero__info {
-    font-family: 'NohemiBlack', sans-serif;
+    font-family: 'BricolageGrotesque', sans-serif;
     font-size: 11px;
     font-weight: 400;
     color: #888;
@@ -112,11 +162,6 @@ h2 span {
     margin-top: 3vw;
     padding-right: 20px;
     min-width: 0
-}
-
-.hero__info--date {
-    grid-column: 1 / 2;
-    grid-row: 3;
 }
 
 .hero__info--desc {

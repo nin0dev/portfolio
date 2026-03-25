@@ -1,9 +1,7 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
+import { useHead } from '@unhead/vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useLenis } from 'lenis/vue'
-import { useScrollAnimations } from '@/composables/useScrollAnimations'
 import '@/assets/css/main.css'
 import '@/assets/css/fonts.css'
 
@@ -13,37 +11,41 @@ import AboutSection from './sections/AboutSection.vue'
 import WorksSection from './sections/WorksSection.vue'
 import ContactSection from './sections/ContactSection.vue'
 import Footer from './components/Footer.vue'
+import LenisScrollTrigger from './components/LenisScrollTrigger.vue'
+
+import { useLenis } from '@/composables/useLenis'
+useLenis()
 
 gsap.registerPlugin(ScrollTrigger)
 
-const { init, destroy } = useScrollAnimations()
-
-useLenis(() => ScrollTrigger.update())
-
-onMounted(() => init())
-onUnmounted(() => destroy())
+useHead({
+  title: 'Nino Berber — Portfolio',
+  meta: [
+    { name: 'description', content: 'Passionate Front-end Web Developer' },
+    { property: 'og:title', content: 'Nino Berber — Portfolio' },
+  ],
+})
 </script>
 
 <template>
-  <VueLenis root>
-    <div class="vertical-lines">
-      <div class="vertical-lines__col"></div>
-      <div class="vertical-lines__col"></div>
-      <div class="vertical-lines__col"></div>
-      <div class="vertical-lines__col"></div>
-      <div class="vertical-lines__col"></div>
-      <div class="vertical-lines__col"></div>
-    </div>
+  <div class="vertical-lines">
+    <div class="vertical-lines__col"></div>
+    <div class="vertical-lines__col"></div>
+    <div class="vertical-lines__col"></div>
+    <div class="vertical-lines__col"></div>
+    <div class="vertical-lines__col"></div>
+    <div class="vertical-lines__col"></div>
+  </div>
+  <LenisScrollTrigger>
     <Navbar />
     <main>
       <HeroSection id="hero" />
-      <div class="image-animation"></div>
       <AboutSection id="about" />
       <WorksSection id="works" />
       <ContactSection id="contact" />
       <Footer />
     </main>
-  </VueLenis>
+  </LenisScrollTrigger>
 </template>
 
 <style>
@@ -63,9 +65,5 @@ onUnmounted(() => destroy())
 
 .vertical-lines__col:first-child {
   border-left: 0.5px solid rgba(255, 255, 255, 0.1);
-}
-
-.image-animation {
-  height: 100vh;
 }
 </style>

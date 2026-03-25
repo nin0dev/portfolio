@@ -2,19 +2,15 @@
 <template>
     <footer class="footer">
         <div class="footer__grid">
-            <div class="footer__initial footer__initial--n">N</div>
-            <div class="footer__initial footer__initial--b">B</div>
-
             <div class="footer__socials">
-                <a href="#" class="footer__link">[ Github ]</a>
-                <a href="#" class="footer__link">[ Instagram ]</a>
-                <a href="#" class="footer__link">[ LinkedIn ]</a>
-                <a href="#" class="footer__link">[ Dribbble ]</a>
+                <a href="https://www.github.com/nin0dev" class="footer__link">[ Github ]</a>
+                <a href="https://www.linkedin.com/in/nino-berber" class="footer__link">[ LinkedIn ]</a>
+                <a href="mailto:ninberber@gmail.com" class="footer__link">[ EMAIL ]</a>
             </div>
 
             <div class="footer__main">
                 <p class="footer__text">Let's work together</p>
-                <a href="mailto:hello@example.com" class="footer__cta">
+                <a href="https://tidycal.com/ninoberber" class="footer__cta">
                     <span class="cta__corner cta__corner--tl"></span>
                     <span class="cta__corner cta__corner--tr"></span>
                     <span class="cta__corner cta__corner--bl"></span>
@@ -26,6 +22,9 @@
             <div class="footer__copyright">
                 @ Copyright 2026
             </div>
+
+            <div class="footer__initial--n">N</div>
+            <div class="footer__initial--b">B</div>
         </div>
     </footer>
 </template>
@@ -59,27 +58,6 @@
     z-index: 1;
 }
 
-.footer__initial {
-    font-family: 'Druk Text Trial', sans-serif;
-    font-size: 20vw;
-    line-height: 0.7;
-    position: absolute;
-    pointer-events: none;
-    font-weight: 700;
-}
-
-.footer__initial--n {
-    color: #FF4D00;
-    top: 50px;
-    left: 40px;
-}
-
-.footer__initial--b {
-    color: rgba(240, 237, 232, 1);
-    bottom: 50px;
-    right: 40px;
-}
-
 .footer__socials {
     grid-column: 6;
     grid-row: 1;
@@ -92,7 +70,7 @@
     color: #888;
     text-decoration: none;
     font-family: 'NohemiBlack', sans-serif;
-    font-size: 11px;
+    font-size: 14px;
     text-transform: uppercase;
     margin-bottom: 8px;
     transition: color 0.3s ease;
@@ -126,7 +104,7 @@
     font-size: 7vw;
     color: #f0ede8;
     text-decoration: none;
-    padding: 30px 80px;
+    padding: 20px 50px;
     text-transform: uppercase;
     transition: color 0.3s ease, transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     display: inline-flex;
@@ -175,7 +153,6 @@
     border-top: 0;
 }
 
-/* Copyright */
 .footer__copyright {
     grid-column: 1 / 3;
     grid-row: 3;
@@ -186,18 +163,21 @@
     font-size: 11px;
 }
 
-@media (max-width: 768px) {
-    .footer__text {
-        font-size: 8vw;
-    }
+.footer__initial--n {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: start;
+    font-family: 'Druk Text Trial';
+    font-size: 70px;
+}
 
-    .footer__cta {
-        font-size: 12vw;
-        padding: 20px 40px;
-    }
-
-    .footer__initial {
-        font-size: 40vw;
-    }
+.footer__initial--b {
+    grid-column: 6;
+    grid-row: 3;
+    align-self: end;
+    justify-self: end;
+    font-family: 'Druk Text Trial';
+    font-size: 70px;
 }
 </style>

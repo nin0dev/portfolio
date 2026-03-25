@@ -1,4 +1,5 @@
-<script></script>
+<script>
+</script>
 <template>
     <section class="about">
         <div class="about__grid">
