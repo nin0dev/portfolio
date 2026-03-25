@@ -60,7 +60,7 @@ onUnmounted(() => {
             <div>
                 <p class="works__tag">[MY WORKS]</p>
                 <h2 class="works__title">
-                    FEATURED WORKS_
+                    FEATURED WORKS<span class="cursor-underscore">_</span>
                 </h2>
             </div>
         </div>
@@ -306,6 +306,24 @@ onUnmounted(() => {
 .works__meta-tag--outline {
     background: transparent;
     border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.cursor-underscore {
+    display: inline-block;
+    animation: slow-cursor-blink 1.5s steps(1, end) infinite;
+}
+
+@keyframes slow-cursor-blink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
 }
 
 .works__list {

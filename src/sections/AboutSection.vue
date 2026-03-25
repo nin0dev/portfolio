@@ -7,7 +7,7 @@
                 <p class="about__tag">[ABOUT ME]</p>
                 <h2 class="about__title">
                     CRAFTING MODERN
-                    WEB EXPERIENCES_
+                    WEB EXPERIENCES<span class="cursor-underscore">_</span>
                 </h2>
                 <div class="about__tools">
                     <div>
@@ -45,7 +45,8 @@
                     clearly, and leave a lasting impression.
                     My work combines clean execution, thoughtful UX, and modern front-end technologies.
                 </p>
-                <button class="about__button"><span class="about__button--square"></span>Get In Touch</button>
+                <button class="about__button"><span class="about__button--square"></span><span
+                        class="about__button-label">Get In Touch</span></button>
             </div>
         </div>
     </section>
@@ -97,6 +98,7 @@
 }
 
 .about__button {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 7px;
@@ -104,15 +106,59 @@
     text-transform: uppercase;
     background-color: white;
     border: none;
-    padding: 8px 4px;
+    padding: 8px 4px 8px 22px;
     margin-top: 32px;
+    color: #0d0d0d;
+    cursor: pointer;
+    overflow: hidden;
+    isolation: isolate;
+    transition: color 0.45s ease;
 }
 
 .about__button--square {
-    display: block;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%) scale(1);
+    transform-origin: center;
+    z-index: 0;
     width: 9px;
     height: 9px;
     background-color: #FF4D00;
+    transition: transform 0.55s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.about__button-label {
+    position: relative;
+    z-index: 1;
+}
+
+.about__button:hover,
+.about__button:focus-visible {
+    color: #ffffff;
+}
+
+.about__button:hover .about__button--square,
+.about__button:focus-visible .about__button--square {
+    transform: translateY(-50%) scale(42);
+}
+
+.cursor-underscore {
+    display: inline-block;
+    animation: slow-cursor-blink 1.8s steps(1, end) infinite;
+}
+
+@keyframes slow-cursor-blink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 768px) {
