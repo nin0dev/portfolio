@@ -212,4 +212,52 @@
         padding: 7px 10px;
     }
 }
+
+@media (max-width: 360px) {
+    .about {
+        margin-top: 22px;
+    }
+
+    .about__grid {
+        gap: 10px;
+    }
+
+    .about__tag {
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+
+    .about__grid h2 {
+        font-size: clamp(34px, 11.5vw, 42px);
+        line-height: 0.9;
+        margin-bottom: 8px;
+    }
+
+    .about__text {
+        font-size: 11px;
+        line-height: 1.3;
+    }
+
+    .about__text p {
+        margin: 0 0 6px;
+    }
+
+    .about__tools {
+        margin-top: 10px;
+        font-size: 9px;
+        gap: 16px;
+    }
+
+    .about__button {
+        font-size: 10px;
+        margin-top: 12px;
+        padding: 6px 8px 6px 18px;
+    }
+
+    .about__button--square {
+        left: 7px;
+        width: 7px;
+        height: 7px;
+    }
+}
 </style>

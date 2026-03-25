@@ -14,3 +14,10 @@ main {
     padding: 0 6px;
   }
 }
+
+@media (max-width: 360px) {
+  nav,
+  main {
+    padding: 0 4px;
+  }
+}

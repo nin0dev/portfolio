@@ -415,4 +415,52 @@ onUnmounted(() => {
         line-height: 1.2;
     }
 }
+
+@media (max-width: 360px) {
+    .works {
+        margin-top: 22px;
+    }
+
+    .works__tag {
+        font-size: 9px;
+    }
+
+    .works__title {
+        margin-bottom: 10px;
+        font-size: clamp(34px, 11.5vw, 42px);
+        line-height: 0.9;
+    }
+
+    .works__grid {
+        gap: 8px;
+    }
+
+    .works__item {
+        aspect-ratio: 16 / 10.5;
+    }
+
+    .works__meta {
+        padding: 6px;
+        gap: 6px;
+    }
+
+    .works__meta-left,
+    .works__meta-right {
+        gap: 4px;
+    }
+
+    .works__meta-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .works__meta-title {
+        font-size: 8px;
+    }
+
+    .works__meta-tag {
+        font-size: 7px;
+        padding: 2px 4px;
+    }
+}
 </style>

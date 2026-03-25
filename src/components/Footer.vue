@@ -259,4 +259,51 @@
         font-size: 9px;
     }
 }
+
+@media (max-width: 360px) {
+    .footer {
+        min-height: 64vh;
+        padding: 24px 0 10px;
+    }
+
+    .footer__grid {
+        row-gap: 18px;
+    }
+
+    .footer__text {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .footer__cta {
+        font-size: 30px;
+        padding: 9px 12px;
+    }
+
+    .cta__corner {
+        width: 6px;
+        height: 6px;
+    }
+
+    .footer__initial--n,
+    .footer__initial--b {
+        font-size: 74px;
+    }
+
+    .footer__initial--n {
+        margin-right: 30px;
+    }
+
+    .footer__initial--b {
+        margin-left: 24px;
+    }
+
+    .footer__link {
+        font-size: 10px;
+    }
+
+    .footer__copyright {
+        font-size: 8px;
+    }
+}
 </style>

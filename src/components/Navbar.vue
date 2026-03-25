@@ -83,7 +83,7 @@ const closeMenu = () => {
 .navbar {
     display: flex;
     justify-content: space-between;
-    font-family: 'Nohemi';
+    font-family: 'NohemiBlack';
     font-weight: 300;
     font-size: 14px;
     color: white;
@@ -268,6 +268,45 @@ const closeMenu = () => {
         text-decoration: none;
         color: #f6f8ff;
         letter-spacing: 0.02em;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-nav {
+        padding-top: 8px;
+    }
+
+    .mobile-time,
+    .mobile-menu-toggle,
+    .mobile-menu__header {
+        font-size: 11px;
+    }
+
+    .mobile-menu {
+        padding: 10px 8px 10px;
+    }
+
+    .mobile-menu__center-wrap {
+        min-height: 34vh;
+    }
+
+    .mobile-menu__corners {
+        inset: 16% 8%;
+    }
+
+    .corner {
+        width: 10px;
+        height: 10px;
+        border-width: 1px;
+    }
+
+    .mobile-menu__list a {
+        font-size: clamp(22px, 9vw, 30px);
+    }
+
+    .mobile-menu__socials {
+        gap: 6px;
+        font-size: 9px;
     }
 }
 

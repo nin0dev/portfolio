@@ -72,4 +72,10 @@ useHead({
     padding: 0 10px;
   }
 }
+
+@media (max-width: 360px) {
+  .vertical-lines {
+    padding: 0 6px;
+  }
+}
 </style>
