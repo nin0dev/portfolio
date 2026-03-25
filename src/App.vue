@@ -9,7 +9,6 @@ import Navbar from './components/Navbar.vue'
 import HeroSection from './sections/HeroSection.vue'
 import AboutSection from './sections/AboutSection.vue'
 import WorksSection from './sections/WorksSection.vue'
-import ContactSection from './sections/ContactSection.vue'
 import Footer from './components/Footer.vue'
 import LenisScrollTrigger from './components/LenisScrollTrigger.vue'
 
@@ -42,7 +41,6 @@ useHead({
       <HeroSection id="hero" />
       <AboutSection id="about" />
       <WorksSection id="works" />
-      <ContactSection id="contact" />
       <Footer />
     </main>
   </LenisScrollTrigger>
@@ -65,5 +63,13 @@ useHead({
 
 .vertical-lines__col:first-child {
   border-left: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .vertical-lines {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 10px;
+  }
 }
 </style>

@@ -114,4 +114,56 @@
     height: 9px;
     background-color: #FF4D00;
 }
+
+@media (max-width: 768px) {
+    .about {
+        height: auto;
+        min-height: auto;
+        margin-top: 34px;
+    }
+
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .about__grid>div:first-child,
+    .about__text {
+        grid-column: 1;
+    }
+
+    .about__tag {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .about__grid h2 {
+        font-size: clamp(42px, 12vw, 52px);
+        line-height: 0.86;
+        margin: 0 0 12px;
+    }
+
+    .about__text {
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .about__text p {
+        margin: 0 0 8px;
+    }
+
+    .about__tools {
+        margin-top: 12px;
+        font-size: 10px;
+        justify-content: space-between;
+        gap: 24px;
+        line-height: 1.1;
+    }
+
+    .about__button {
+        font-size: 12px;
+        margin-top: 16px;
+        padding: 7px 10px;
+    }
+}
 </style>

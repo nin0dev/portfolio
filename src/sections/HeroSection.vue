@@ -25,23 +25,29 @@ onMounted(async () => {
             stagger: 0.1,
             delay: 0.2,
         })
-    }, heroRef.value)
 
-    ctx = gsap.context(() => {
-        const split = new SplitText('.hero__info--desc, .hero__info--skills, .hero__info--location', {
+
+        const split2 = new SplitText('.hero__info--desc, .hero__info--skills, .hero__info--location', {
             type: 'lines',
             mask: 'lines',
         })
 
-        gsap.from(split.lines, {
+        gsap.from(split2.lines, {
             xPercent: -60,
             duration: .9,
             ease: 'power4.out',
             stagger: 0.1,
             delay: 0.2,
         })
-    })
 
+        gsap.from('.hero__image', {
+            yPercent: -120,
+            duration: .9,
+            ease: 'power4.out',
+            delay: 0.2,
+            opacity: 0,
+        })
+    }, heroRef.value)
 })
 
 onUnmounted(() => {
@@ -61,7 +67,7 @@ onUnmounted(() => {
             <h2 class="hero__title-bottom"><b>Web </b>Developer</h2>
 
             <span class="hero__info hero__info--desc">
-                Freelance interactive developer.<br>
+                Interactive developer.<br>
                 I build handcrafted websites<br>
                 with motion, subtle details<br>
                 and fun interactions
@@ -113,7 +119,7 @@ h2 {
     font-weight: 700;
     font-size: 10vw;
     margin: 0;
-    line-height: .87;
+    line-height: .9;
     letter-spacing: -0.05em;
     min-width: 0;
     white-space: nowrap;
@@ -133,8 +139,8 @@ h2 b {
 
 .hero__image {
     width: 100%;
-    font-size: 10vw;
-    height: 0.75em;
+    font-size: 9vw;
+    height: 0.849em;
     background-image: url('/src/assets/images/background.png');
     background-size: cover;
     background-position: center center;
@@ -177,5 +183,71 @@ h2 b {
 .hero__info--location {
     grid-column: 6 / 7;
     grid-row: 3;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        align-items: flex-start;
+        padding-top: 64px;
+    }
+
+    .hero__grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+    }
+
+    h2 {
+        font-size: clamp(56px, 19.2vw, 68px);
+        line-height: 0.88;
+    }
+
+    .hero__image-wrapper {
+        display: flex;
+        width: 100%;
+        margin: 10px 0 8px;
+        order: 3;
+    }
+
+    .hero__image {
+        width: 100%;
+        height: 118px;
+        font-size: initial;
+    }
+
+    .hero__title-top {
+        order: 1;
+    }
+
+    .hero__title-bottom {
+        order: 2;
+    }
+
+    .hero__info {
+        display: block;
+        margin-top: 0;
+        padding-right: 0;
+        font-size: 9px;
+        letter-spacing: 0.01em;
+        line-height: 1.45;
+    }
+
+    .hero__info--desc {
+        order: 4;
+    }
+
+    .hero__info--skills {
+        order: 5;
+        margin-top: 10px;
+    }
+
+    .hero__info--location {
+        order: 6;
+        margin-top: 10px;
+        align-self: flex-end;
+    }
 }
 </style>

@@ -180,4 +180,82 @@
     font-family: 'Druk Text Trial';
     font-size: 70px;
 }
+
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        min-height: 76vh;
+        padding: 36px 0 14px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 0;
+        row-gap: 26px;
+    }
+
+    .footer__main {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .footer__text {
+        margin: 0 0 14px;
+        text-align: center;
+        font-size: 32px;
+        line-height: 0.9;
+    }
+
+    .footer__cta {
+        padding: 12px 20px;
+        font-size: 40px;
+        line-height: 0.9;
+        text-align: center;
+    }
+
+    .cta__corner {
+        width: 8px;
+        height: 8px;
+    }
+
+    .footer__initial--n {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: end;
+        font-size: 96px;
+        line-height: 0.8;
+        color: #ff4d00;
+    }
+
+    .footer__initial--b {
+        grid-column: 1;
+        grid-row: 2;
+        align-self: end;
+        justify-self: start;
+        margin-left: 31px;
+        font-size: 96px;
+        line-height: 0.8;
+    }
+
+    .footer__socials {
+        grid-column: 2;
+        grid-row: 2;
+        align-self: end;
+        justify-self: end;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    .footer__link {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .footer__copyright {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        font-size: 9px;
+    }
+}
 </style>

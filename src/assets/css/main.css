@@ -7,3 +7,10 @@ nav,
 main {
   padding: 0 40px;
 }
+
+@media (max-width: 768px) {
+  nav,
+  main {
+    padding: 0 6px;
+  }
+}

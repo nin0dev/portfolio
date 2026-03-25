@@ -4,18 +4,34 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const works = [
     {
         id: 1,
-        title: 'ReflexProd CRM',
+        title: 'Name #1',
         category: 'Development',
-        tech: 'Next.js',
+        tech: 'React',
         image: '/src/assets/images/crm-project_thumb.png',
         link: '#',
     },
     {
         id: 2,
-        title: 'Fictional Product Showcase',
+        title: 'Name #2',
         category: 'Development',
-        tech: 'HTML / CSS / JS',
+        tech: 'Next.js',
         image: '/src/assets/images/product-project_thumb.png',
+        link: '#',
+    },
+    {
+        id: 3,
+        title: 'Name #3',
+        category: 'Development',
+        tech: 'React',
+        image: '/src/assets/images/product-project_thumb.png',
+        link: '#',
+    },
+    {
+        id: 4,
+        title: 'Name #4',
+        category: 'Development',
+        tech: 'React',
+        image: '/src/assets/images/crm-project_thumb.png',
         link: '#',
     },
 ]
@@ -33,6 +49,8 @@ function onMouseLeave() {
 }
 
 onMounted(() => {
+    if (window.matchMedia('(max-width: 768px)').matches) return
+
     const items = document.querySelectorAll('.works__item')
     items.forEach(item => {
         item.addEventListener('mouseenter', onMouseEnter)
@@ -80,6 +98,15 @@ onUnmounted(() => {
                 </div>
             </a>
         </div>
+
+        <ul class="works__list">
+            <li v-for="work in works" :key="`list-${work.id}`" class="works__list-item">
+                <span>2024</span>
+                <span>{{ work.title }}</span>
+                <span>{{ work.category }}, {{ work.tech }}</span>
+                <a :href="work.link">[ View Case ]</a>
+            </li>
+        </ul>
     </section>
 </template>
 <style scoped>
@@ -304,5 +331,95 @@ onUnmounted(() => {
 .works__meta-tag--outline {
     background: transparent;
     border: 0.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.works__list {
+    margin: 14px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.works__list-item {
+    display: grid;
+    grid-template-columns: 58px 78px 1fr auto;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+    color: #d8dae4;
+    font-family: 'NohemiBlack', sans-serif;
+    font-size: 12px;
+}
+
+.works__list-item a {
+    color: #c8cad4;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .works {
+        height: auto;
+        min-height: auto;
+        margin-top: 34px;
+    }
+
+    .works__cursor {
+        display: none;
+    }
+
+    .works__intro {
+        display: block;
+    }
+
+    .works__intro>div:first-child {
+        grid-column: auto;
+    }
+
+    .works__tag {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+
+    .works__title {
+        margin: 0 0 14px;
+        font-size: clamp(40px, 12vw, 50px);
+        line-height: 0.86;
+    }
+
+    .works__grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .works__item {
+        aspect-ratio: 16 / 10;
+        cursor: pointer;
+    }
+
+    .works__meta {
+        opacity: 1;
+        transform: translateY(0);
+        padding: 7px 8px;
+        background: rgba(6, 8, 16, 0.72);
+    }
+
+    .works__meta-title {
+        font-size: 10px;
+    }
+
+    .works__meta-tag {
+        font-size: 9px;
+        padding: 2px 5px;
+    }
+
+    .works__list {
+        margin-top: 10px;
+    }
+
+    .works__list-item {
+        grid-template-columns: 34px 60px 1fr auto;
+        gap: 6px;
+        font-size: 9px;
+        line-height: 1.2;
+    }
 }
 </style>
