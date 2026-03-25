@@ -24,6 +24,7 @@ onMounted(async () => {
             ease: 'power4.out',
             stagger: 0.1,
             delay: 0.2,
+            opacity: 0,
         })
 
 
@@ -38,6 +39,7 @@ onMounted(async () => {
             ease: 'power4.out',
             stagger: 0.1,
             delay: 0.2,
+            opacity: 0,
         })
 
         gsap.from('.hero__image', {
@@ -188,7 +190,6 @@ h2 b {
 @media (max-width: 768px) {
     .hero {
         height: auto;
-        min-height: 80vh;
         align-items: flex-start;
         padding-top: 64px;
     }

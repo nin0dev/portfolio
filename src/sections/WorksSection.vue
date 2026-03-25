@@ -1,5 +1,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const works = [
     {
@@ -21,6 +25,9 @@ const works = [
 ]
 
 const cursor = ref(null)
+const worksRef = ref(null)
+let ctx
+let hoverItems = []
 
 function onMouseMove(e) {
     cursor.value.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`
@@ -33,10 +40,27 @@ function onMouseLeave() {
 }
 
 onMounted(() => {
+    ctx = gsap.context(() => {
+        const images = gsap.utils.toArray('.works__image')
+
+        images.forEach((image) => {
+            gsap.from(image, {
+                scale: 1.22,
+                duration: 1.1,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: image.closest('.works__item'),
+                    start: 'top 86%',
+                    once: true,
+                },
+            })
+        })
+    }, worksRef.value)
+
     if (window.matchMedia('(max-width: 768px)').matches) return
 
-    const items = document.querySelectorAll('.works__item')
-    items.forEach(item => {
+    hoverItems = Array.from(document.querySelectorAll('.works__item'))
+    hoverItems.forEach(item => {
         item.addEventListener('mouseenter', onMouseEnter)
         item.addEventListener('mouseleave', onMouseLeave)
     })
@@ -44,11 +68,18 @@ onMounted(() => {
 })
 
 onUnmounted(() => {
+    if (ctx) ctx.revert()
+
+    hoverItems.forEach(item => {
+        item.removeEventListener('mouseenter', onMouseEnter)
+        item.removeEventListener('mouseleave', onMouseLeave)
+    })
+
     window.removeEventListener('mousemove', onMouseMove)
 })
 </script>
 <template>
-    <section class="works">
+    <section class="works" ref="worksRef">
         <div class="works__cursor" ref="cursor">
             <span class="works__cursor-corner works__cursor-corner--tl"></span>
             <span class="works__cursor-corner works__cursor-corner--tr"></span>

@@ -1,7 +1,62 @@
-<script>
+<script setup>
+import { onMounted, onUnmounted, ref } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const aboutRef = ref(null)
+let ctx
+
+onMounted(() => {
+    ctx = gsap.context(() => {
+        gsap.from('.about__tag, .about__title', {
+            y: 36,
+            opacity: 0,
+            duration: 0.9,
+            ease: 'power3.out',
+            stagger: 0.08,
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top 78%',
+                once: true,
+            },
+        })
+
+        gsap.from('.about__tools p', {
+            y: 20,
+            opacity: 0,
+            duration: 0.55,
+            ease: 'power2.out',
+            stagger: 0.03,
+            scrollTrigger: {
+                trigger: '.about',
+                start: 'top 72%',
+                once: true,
+            },
+        })
+
+        gsap.from('.about__text p, .about__button', {
+            x: 24,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            stagger: 0.07,
+            scrollTrigger: {
+                trigger: '.about__text',
+                start: 'top 80%',
+                once: true,
+            },
+        })
+    }, aboutRef.value)
+})
+
+onUnmounted(() => {
+    if (ctx) ctx.revert()
+})
 </script>
 <template>
-    <section class="about">
+    <section class="about" ref="aboutRef">
         <div class="about__grid">
             <div>
                 <p class="about__tag">[ABOUT ME]</p>
@@ -45,8 +100,11 @@
                     clearly, and leave a lasting impression.
                     My work combines clean execution, thoughtful UX, and modern front-end technologies.
                 </p>
-                <button class="about__button"><span class="about__button--square"></span><span
-                        class="about__button-label">Get In Touch</span></button>
+                <a href="/#footer">
+                    <button class="about__button"><span class="about__button--square"></span><span
+                            class="about__button-label">Get In Touch</span>
+                    </button>
+                </a>
             </div>
         </div>
     </section>
@@ -95,6 +153,10 @@
     font-family: 'NohemiBlack';
     font-size: 14px;
     color: #F5F5F4;
+}
+
+.about__text a {
+    text-decoration: none;
 }
 
 .about__button {
@@ -251,7 +313,7 @@
     .about__button {
         font-size: 10px;
         margin-top: 12px;
-        padding: 6px 8px 6px 18px;
+        padding: 10px 4px 8px 50px;
     }
 
     .about__button--square {

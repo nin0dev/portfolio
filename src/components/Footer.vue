@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="footer__grid">
             <div class="footer__socials">
                 <a href="https://www.github.com/nin0dev" class="footer__link">[ Github ]</a>
