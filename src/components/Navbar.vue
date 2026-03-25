@@ -7,9 +7,8 @@ const isMenuOpen = ref(false)
 
 const socialLinks = [
     { label: 'Github', href: 'https://github.com' },
-    { label: 'Instagram', href: 'https://instagram.com' },
     { label: 'LinkedIn', href: 'https://linkedin.com' },
-    { label: 'Dribble', href: 'https://dribbble.com' },
+    { label: 'Email', href: 'mailto:ninberber@gmail.com' },
 ]
 
 const lockBodyScroll = (locked) => {
@@ -39,12 +38,14 @@ const closeMenu = () => {
         </ul>
     </nav>
 
-    <p class="mobile-time">{{ formattedTime }} CET</p>
+    <div class="mobile-nav">
+        <p class="mobile-time">{{ formattedTime }} CET</p>
 
-    <button class="mobile-menu-toggle" type="button" :aria-expanded="isMenuOpen" aria-controls="mobile-menu"
-        @click="isMenuOpen = true">
-        Menu
-    </button>
+        <button class="mobile-menu-toggle" type="button" :aria-expanded="isMenuOpen" aria-controls="mobile-menu"
+            @click="isMenuOpen = true">
+            Menu
+        </button>
+    </div>
 
     <transition name="mobile-menu-fade">
         <aside v-if="isMenuOpen" id="mobile-menu" class="mobile-menu" role="dialog" aria-modal="true">
@@ -101,21 +102,10 @@ const closeMenu = () => {
     color: white;
 }
 
-.nav__list-item--selected {
-    display: flex;
-    align-items: center;
-}
-
-.nav__square--selected {
-    width: 6px;
-    height: 6px;
-    background-color: #ff4d00;
-    margin-right: 6px;
-}
-
 .mobile-menu-toggle,
 .mobile-menu,
-.mobile-time {
+.mobile-time,
+.mobile-nav {
     display: none;
 }
 
@@ -124,16 +114,23 @@ const closeMenu = () => {
         display: none;
     }
 
+    .mobile-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        margin-bottom: 6px;
+        position: relative;
+        z-index: 40;
+    }
+
     .mobile-menu-toggle {
         display: inline-flex;
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        z-index: 40;
+        position: static;
         background: transparent;
         border: 0;
         color: #ffffff;
-        font-family: 'Nohemi';
+        font-family: 'NohemiBlack';
         font-size: 13px;
         font-weight: 300;
         letter-spacing: 0.02em;
@@ -143,12 +140,9 @@ const closeMenu = () => {
 
     .mobile-time {
         display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        z-index: 40;
+        position: static;
         margin: 0;
-        font-family: 'Nohemi';
+        font-family: 'NohemiBlack';
         font-size: 13px;
         font-weight: 300;
         color: rgba(255, 255, 255, 0.75);
@@ -165,7 +159,7 @@ const closeMenu = () => {
         justify-content: space-between;
         background: radial-gradient(circle at 20% 20%, #14182e, #06070f 70%);
         color: #ffffff;
-        font-family: 'Nohemi';
+        font-family: 'NohemiBlack';
     }
 
     .mobile-menu__header {
@@ -256,16 +250,6 @@ const closeMenu = () => {
         font-size: clamp(26px, 10vw, 42px);
         font-weight: 300;
         line-height: 1.15;
-    }
-
-    .mobile-menu__list a.active::before {
-        content: '';
-        position: absolute;
-        width: 7px;
-        height: 7px;
-        left: -14px;
-        top: 0.42em;
-        background: #ff4d00;
     }
 
     .mobile-menu__socials {

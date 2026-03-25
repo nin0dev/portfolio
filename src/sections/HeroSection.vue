@@ -188,7 +188,7 @@ h2 b {
 @media (max-width: 768px) {
     .hero {
         height: auto;
-        min-height: 100vh;
+        min-height: 65vh;
         align-items: flex-start;
         padding-top: 64px;
     }

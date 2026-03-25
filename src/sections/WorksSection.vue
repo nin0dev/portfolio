@@ -4,34 +4,18 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const works = [
     {
         id: 1,
-        title: 'Name #1',
+        title: 'ReflexProd CRM',
         category: 'Development',
-        tech: 'React',
+        tech: 'Next.js',
         image: '/src/assets/images/crm-project_thumb.png',
         link: '#',
     },
     {
         id: 2,
-        title: 'Name #2',
+        title: 'Fictional Product Showcase',
         category: 'Development',
-        tech: 'Next.js',
+        tech: 'HTML / CSS / JS',
         image: '/src/assets/images/product-project_thumb.png',
-        link: '#',
-    },
-    {
-        id: 3,
-        title: 'Name #3',
-        category: 'Development',
-        tech: 'React',
-        image: '/src/assets/images/product-project_thumb.png',
-        link: '#',
-    },
-    {
-        id: 4,
-        title: 'Name #4',
-        category: 'Development',
-        tech: 'React',
-        image: '/src/assets/images/crm-project_thumb.png',
         link: '#',
     },
 ]
@@ -98,15 +82,6 @@ onUnmounted(() => {
                 </div>
             </a>
         </div>
-
-        <ul class="works__list">
-            <li v-for="work in works" :key="`list-${work.id}`" class="works__list-item">
-                <span>2024</span>
-                <span>{{ work.title }}</span>
-                <span>{{ work.category }}, {{ work.tech }}</span>
-                <a :href="work.link">[ View Case ]</a>
-            </li>
-        </ul>
     </section>
 </template>
 <style scoped>

@@ -209,7 +209,7 @@
 
     .footer__cta {
         padding: 12px 20px;
-        font-size: 40px;
+        font-size: 6vw;
         line-height: 0.9;
         text-align: center;
     }
@@ -225,7 +225,8 @@
         align-self: end;
         font-size: 96px;
         line-height: 0.8;
-        color: #ff4d00;
+        color: white;
+        margin-right: 40px;
     }
 
     .footer__initial--b {
