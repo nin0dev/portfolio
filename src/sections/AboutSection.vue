@@ -1,64 +1,7 @@
-<script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
-
-const aboutRef = ref(null)
-let ctx
-
-onMounted(() => {
-    ctx = gsap.context(() => {
-        gsap.from('.about__tag, .about__title', {
-            y: 36,
-            opacity: 0,
-            duration: 0.9,
-            ease: 'power3.out',
-            stagger: 0.08,
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 78%',
-                once: true,
-            },
-        })
-
-        gsap.from('.about__tools p', {
-            y: 20,
-            opacity: 0,
-            duration: 0.55,
-            ease: 'power2.out',
-            stagger: 0.03,
-            scrollTrigger: {
-                trigger: '.about',
-                start: 'top 72%',
-                once: true,
-            },
-        })
-
-        gsap.from('.about__text p, .about__button', {
-            x: 24,
-            opacity: 0,
-            duration: 0.8,
-            ease: 'power3.out',
-            stagger: 0.07,
-            scrollTrigger: {
-                trigger: '.about__text',
-                start: 'top 80%',
-                once: true,
-            },
-        })
-    }, aboutRef.value)
-})
-
-onUnmounted(() => {
-    if (ctx) ctx.revert()
-})
-</script>
 <template>
     <section class="about" ref="aboutRef">
         <div class="about__grid">
-            <div>
+            <div class="about__content-left">
                 <p class="about__tag">[ABOUT ME]</p>
                 <h2 class="about__title">
                     CRAFTING MODERN
@@ -84,58 +27,55 @@ onUnmounted(() => {
             <div class="about__text">
                 <p>[1.0]</p>
                 <p>Web Developer & Creative Technologist crafting polished, high-performance digital experiences with a
-                    strong focus on interaction, motion, and detail.
-                    I build modern websites and interfaces that feel intuitive, refined, and memorable.
-                </p>
+                    strong focus on interaction, motion, and detail.</p>
                 <p>[2.0]</p>
-                <p>
-                    With years of experience across design and development, I specialize in translating visual ideas
-                    into
-                    responsive, production-ready experiences for brands, products, and startups.
-                    My work combines clean execution, thoughtful UX, and modern front-end technologies.
-                </p>
+                <p>With years of experience across design and development, I specialize in translating visual ideas into
+                    responsive, production-ready experiences for brands, products, and startups.</p>
                 <p>[3.0]</p>
-                <p>
-                    I’m passionate about building websites that not only look sharp, but also perform well, communicate
-                    clearly, and leave a lasting impression.
-                    My work combines clean execution, thoughtful UX, and modern front-end technologies.
-                </p>
-                <a href="/#footer">
-                    <button class="about__button"><span class="about__button--square"></span><span
-                            class="about__button-label">Get In Touch</span>
-                    </button>
+                <p>I’m passionate about building websites that not only look sharp, but also perform well, communicate
+                    clearly, and leave a lasting impression.</p>
+                <a href="/#footer" class="about__button">
+                    <span class="about__button--square"></span>
+                    <span class="about__button-label">Get In Touch</span>
                 </a>
             </div>
         </div>
     </section>
 </template>
+
 <style scoped>
 .about {
-    height: 90vh;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    box-sizing: border-box;
 }
 
 .about__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     width: 100%;
+}
+
+.about__content-left {
+    grid-column: 2 / 4;
 }
 
 .about__tag {
     font-family: 'NohemiBlack';
     font-size: 12px;
     color: #888;
+    margin-bottom: 8px;
 }
 
-.about__grid h2 {
+.about__title {
     font-family: 'Druk Text Trial';
-    font-size: 64px;
+    font-size: clamp(48px, 5.5vw, 64px);
     color: #FF4D00;
     line-height: 90%;
     letter-spacing: -0.05em;
-}
-
-.about__grid>div:first-child {
-    grid-column: 2 / 4;
+    margin: 0 0 24px;
 }
 
 .about__tools {
@@ -143,9 +83,9 @@ onUnmounted(() => {
     font-size: 12px;
     text-transform: uppercase;
     color: #888;
-    line-height: 14%;
+    line-height: 1.6;
     display: flex;
-    gap: 165px;
+    gap: 15%;
 }
 
 .about__text {
@@ -153,6 +93,7 @@ onUnmounted(() => {
     font-family: 'NohemiBlack';
     font-size: 14px;
     color: #F5F5F4;
+    line-height: 1.5;
 }
 
 .about__text a {
@@ -161,14 +102,14 @@ onUnmounted(() => {
 
 .about__button {
     position: relative;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     font-family: 'NohemiBlack';
     text-transform: uppercase;
     background-color: white;
     border: none;
-    padding: 8px 4px 8px 22px;
+    padding: 8px 8px 8px 22px;
     margin-top: 32px;
     color: #0d0d0d;
     cursor: pointer;
@@ -205,121 +146,35 @@ onUnmounted(() => {
     transform: translateY(-50%) scale(42);
 }
 
-.cursor-underscore {
-    display: inline-block;
-    animation: slow-cursor-blink 1.8s steps(1, end) infinite;
-}
-
-@keyframes slow-cursor-blink {
-
-    0%,
-    45% {
-        opacity: 1;
+@media (max-width: 1200px) {
+    .about__grid {
+        grid-template-columns: 0.5fr 2.5fr 0.2fr 2.5fr 0.3fr;
     }
 
-    50%,
-    100% {
-        opacity: 0;
+    .about__content-left {
+        grid-column: 2;
+    }
+
+    .about__text {
+        grid-column: 4;
     }
 }
 
 @media (max-width: 768px) {
     .about {
-        height: auto;
-        min-height: auto;
-        margin-top: 34px;
+        padding: 60px 20px;
     }
 
     .about__grid {
-        grid-template-columns: 1fr;
-        gap: 14px;
+        display: block;
     }
 
-    .about__grid>div:first-child,
-    .about__text {
-        grid-column: 1;
-    }
-
-    .about__tag {
-        font-size: 10px;
-        margin-bottom: 4px;
-    }
-
-    .about__grid h2 {
-        font-size: clamp(42px, 12vw, 52px);
-        line-height: 0.86;
-        margin: 0 0 12px;
+    .about__title {
+        font-size: 42px;
     }
 
     .about__text {
-        font-size: 13px;
-        line-height: 1.35;
-    }
-
-    .about__text p {
-        margin: 0 0 8px;
-    }
-
-    .about__tools {
-        margin-top: 12px;
-        font-size: 10px;
-        justify-content: space-between;
-        gap: 24px;
-        line-height: 1.1;
-    }
-
-    .about__button {
-        font-size: 12px;
-        margin-top: 16px;
-        padding: 7px 10px;
-    }
-}
-
-@media (max-width: 360px) {
-    .about {
-        margin-top: 22px;
-    }
-
-    .about__grid {
-        gap: 10px;
-    }
-
-    .about__tag {
-        font-size: 9px;
-        margin-bottom: 3px;
-    }
-
-    .about__grid h2 {
-        font-size: clamp(34px, 11.5vw, 42px);
-        line-height: 0.9;
-        margin-bottom: 8px;
-    }
-
-    .about__text {
-        font-size: 11px;
-        line-height: 1.3;
-    }
-
-    .about__text p {
-        margin: 0 0 6px;
-    }
-
-    .about__tools {
-        margin-top: 10px;
-        font-size: 9px;
-        gap: 16px;
-    }
-
-    .about__button {
-        font-size: 10px;
-        margin-top: 12px;
-        padding: 10px 4px 8px 50px;
-    }
-
-    .about__button--square {
-        left: 7px;
-        width: 7px;
-        height: 7px;
+        margin-top: 40px;
     }
 }
 </style>

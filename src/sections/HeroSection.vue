@@ -105,7 +105,7 @@ onUnmounted(() => {
 
 .hero__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-template-rows: auto auto auto;
     width: 100%;
     align-items: start;
@@ -119,7 +119,7 @@ h2 {
     color: #f4f4f4;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 10vw;
+    font-size: clamp(60px, 10vw, 160px);
     margin: 0;
     line-height: .9;
     letter-spacing: -0.05em;
@@ -185,6 +185,35 @@ h2 b {
 .hero__info--location {
     grid-column: 6 / 7;
     grid-row: 3;
+}
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .hero {
+        height: auto;
+        align-items: flex-start;
+        padding-top: 40px;
+    }
+
+    h2 {
+        font-size: clamp(72px, 9.2vw, 110px);
+        line-height: 0.88;
+    }
+
+    .hero__image {
+        height: clamp(66px, 6.8vw, 84px);
+    }
+
+    .hero__info {
+        margin-top: 16px;
+        font-size: 10px;
+        line-height: 1.4;
+        padding-right: 12px;
+    }
+
+    .hero__info--location {
+        justify-self: end;
+        text-align: right;
+    }
 }
 
 @media (max-width: 768px) {

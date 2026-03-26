@@ -3,6 +3,9 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+import crmThumb from '@/assets/images/crm-project_thumb.png'
+import productThumb from '@/assets/images/product-project_thumb.png'
+
 gsap.registerPlugin(ScrollTrigger)
 
 const works = [
@@ -11,7 +14,7 @@ const works = [
         title: 'ReflexProd CRM',
         category: 'Development',
         tech: 'Next.js',
-        image: '/src/assets/images/crm-project_thumb.png',
+        image: crmThumb,
         link: '/projects/reflexprod-crm',
     },
     {
@@ -19,7 +22,7 @@ const works = [
         title: 'Fictional Product Showcase',
         category: 'Development',
         tech: 'HTML / CSS / JS',
-        image: '/src/assets/images/product-project_thumb.png',
+        image: productThumb,
         link: '/projects/fictional-product-showcase',
     },
 ]
@@ -117,24 +120,7 @@ onUnmounted(() => {
 </template>
 <style scoped>
 .works {
-    height: 100vh;
-}
-
-.works__cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 90px;
-    height: 90px;
-    pointer-events: none;
-    z-index: 1000;
-    opacity: 0;
-    margin-left: -45px;
-    margin-top: -45px;
-    transition: opacity 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 100vh;
 }
 
 .works__cursor.is-active {
@@ -357,33 +343,54 @@ onUnmounted(() => {
     }
 }
 
-.works__list {
-    margin: 14px 0 0;
-    padding: 0;
-    list-style: none;
-}
+@media (min-width: 769px) and (max-width: 1100px) {
+    .works {
+        min-height: auto;
+        margin-top: 100px;
+    }
 
-.works__list-item {
-    display: grid;
-    grid-template-columns: 58px 78px 1fr auto;
-    gap: 10px;
-    padding: 7px 0;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
-    color: #d8dae4;
-    font-family: 'NohemiBlack', sans-serif;
-    font-size: 12px;
-}
+    .works__intro>div:first-child {
+        grid-column: 2 / 5;
+    }
 
-.works__list-item a {
-    color: #c8cad4;
-    text-decoration: none;
+    .works__title {
+        font-size: clamp(48px, 7.4vw, 70px);
+        line-height: 0.9;
+        margin: 0 0 14px;
+    }
+
+    .works__item {
+        aspect-ratio: 16 / 12;
+    }
+
+    .works__meta {
+        opacity: 1;
+        transform: translateY(0);
+        padding: 9px 10px;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .works__meta-right {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .works__meta-title {
+        font-size: 10px;
+    }
+
+    .works__meta-tag {
+        font-size: 9px;
+        padding: 2px 5px;
+    }
 }
 
 @media (max-width: 768px) {
     .works {
         height: auto;
         min-height: auto;
-        margin-top: 34px;
+        margin-top: 90px;
     }
 
     .works__cursor {
@@ -433,17 +440,6 @@ onUnmounted(() => {
     .works__meta-tag {
         font-size: 9px;
         padding: 2px 5px;
-    }
-
-    .works__list {
-        margin-top: 10px;
-    }
-
-    .works__list-item {
-        grid-template-columns: 34px 60px 1fr auto;
-        gap: 6px;
-        font-size: 9px;
-        line-height: 1.2;
     }
 }
 

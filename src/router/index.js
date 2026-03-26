@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ReflexProdProjectView from '@/views/ReflexProdProjectView.vue'
 import FictionalProductProjectView from '@/views/FictionalProductProjectView.vue'
-import App from '@/App.vue'
+import Home from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: App,
+      component: Home,
     },
     {
       path: '/projects/reflexprod-crm',
