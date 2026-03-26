@@ -40,7 +40,7 @@ onMounted
                 <p>[3.0]</p>
                 <p>I’m passionate about building websites that not only look sharp, but also perform well, communicate
                     clearly, and leave a lasting impression.</p>
-                <a href="/#footer" class="about__button">
+                <a href="/portfolio/#footer" class="about__button">
                     <span class="about__button--square"></span>
                     <span class="about__button-label">Get In Touch</span>
                 </a>
