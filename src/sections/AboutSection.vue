@@ -1,3 +1,9 @@
+<script setup>
+import gsap from 'gsap';
+import { onMounted, onUnmounted } from 'vue';
+
+onMounted
+</script>
 <template>
     <section class="about" ref="aboutRef">
         <div class="about__grid">

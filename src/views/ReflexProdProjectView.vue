@@ -1,9 +1,15 @@
 <script setup>
 import { useHead } from '@unhead/vue'
+import Footer from '@/components/Footer.vue';
+import { onMounted } from 'vue';
 
 useHead({
     title: 'ReflexProd CRM - Project',
     meta: [{ name: 'description', content: 'ReflexProd CRM project case study.' }],
+})
+
+onMounted(() => {
+    window.scrollTo(0, 0)
 })
 </script>
 
@@ -19,6 +25,7 @@ useHead({
                     </p>
                     <img src="/src/assets/images/crm-project_thumb.png" alt="ReflexProd CRM preview" />
                 </section>
+                <Footer />
     </main>
 </template>
 

@@ -1,16 +1,21 @@
 <script setup>
 import { useHead } from '@unhead/vue'
+import Footer from '@/components/Footer.vue';
+import { onMounted } from 'vue';
 
 useHead({
     title: 'Fictional Product Showcase - Project',
     meta: [{ name: 'description', content: 'Fictional Product Showcase project case study.' }],
+})
+
+onMounted(() => {
+    window.scrollTo(0, 0)
 })
 </script>
 
 <template>
     <main class="project-page">
         <RouterLink to="/" class="project-page__back"><- Back to home</RouterLink>
-
                 <section class="project-page__hero">
                     <p class="project-page__tag">[ Project ]</p>
                     <h1>Fictional Product Showcase</h1>
@@ -19,6 +24,7 @@ useHead({
                     </p>
                     <img src="/src/assets/images/product-project_thumb.png" alt="Fictional Product Showcase preview" />
                 </section>
+                <Footer />
     </main>
 </template>
 

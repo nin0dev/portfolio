@@ -3,8 +3,8 @@
     <footer id="footer" class="footer">
         <div class="footer__grid">
             <div class="footer__socials">
-                <a href="https://www.github.com/nin0dev" class="footer__link">[ Github ]</a>
-                <a href="https://www.linkedin.com/in/nino-berber" class="footer__link">[ LinkedIn ]</a>
+                <a href="https://www.github.com/nin0dev" class="footer__link">[ GITHUB ]</a>
+                <a href="https://www.linkedin.com/in/nino-berber" class="footer__link">[ LINKEDIN ]</a>
                 <a href="mailto:ninberber@gmail.com" class="footer__link">[ EMAIL ]</a>
             </div>
 
@@ -31,7 +31,6 @@
 
 <style scoped>
 .footer {
-    height: 100vh;
     display: flex;
     align-items: center;
     position: relative;
