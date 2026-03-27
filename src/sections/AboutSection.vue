@@ -147,6 +147,24 @@
     transform: translateY(-50%) scale(42);
 }
 
+.cursor-underscore {
+    display: inline-block;
+    animation: slow-cursor-blink 1.5s steps(1, end) infinite;
+}
+
+@keyframes slow-cursor-blink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 1200px) {
     .about__grid {
         grid-template-columns: 0.5fr 2.5fr 0.2fr 2.5fr 0.3fr;
