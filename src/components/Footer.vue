@@ -99,7 +99,7 @@
 .footer__cta {
     position: relative;
     font-family: 'Druk Text Trial', sans-serif;
-    font-size: 7vw;
+    font-size: 5vw;
     color: #f0ede8;
     text-decoration: none;
     padding: 20px 50px;
@@ -283,7 +283,7 @@
     }
 
     .footer__cta {
-        font-size: 30px;
+        font-size: 20px;
         padding: 9px 12px;
     }
 
