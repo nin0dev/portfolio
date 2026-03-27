@@ -1,6 +1,5 @@
 <script setup>
-import gsap from 'gsap';
-import { onMounted, onUnmounted } from 'vue';
+import { onMounted } from 'vue';
 
 onMounted
 </script>

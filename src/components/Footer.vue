@@ -23,8 +23,7 @@
                 @ Copyright 2026
             </div>
 
-            <div class="footer__initial--n">N</div>
-            <div class="footer__initial--b">B</div>
+            <div class="footer__name">NINO BERBER</div>
         </div>
     </footer>
 </template>
@@ -162,22 +161,13 @@
     font-size: 11px;
 }
 
-.footer__initial--n {
+.footer__name {
     grid-column: 1;
     grid-row: 1;
     align-self: start;
     justify-self: start;
-    font-family: 'Druk Text Trial';
-    font-size: 70px;
-}
-
-.footer__initial--b {
-    grid-column: 6;
-    grid-row: 3;
-    align-self: end;
-    justify-self: end;
-    font-family: 'Druk Text Trial';
-    font-size: 70px;
+    font-family: 'NohemiBlack';
+    font-size: 20px;
 }
 
 @media (min-width: 769px) and (max-width: 1100px) {

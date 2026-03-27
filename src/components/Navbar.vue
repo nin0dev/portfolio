@@ -30,16 +30,16 @@ const closeMenu = () => {
 
 <template>
     <nav class="navbar">
-        <p>{{ formattedTime }} EST</p>
+        <p>[ NINO BERBER ] • {{ formattedTime }} EST</p>
         <ul class="nav__list">
             <li><a href="/portfolio/#about">About</a></li>
             <li><a href="/portfolio/#works">Works</a></li>
-            <li><a href="/portfolio/#contact">Contact</a></li>
+            <li><a href="/portfolio/#footer">Contact</a></li>
         </ul>
     </nav>
 
     <div class="mobile-nav">
-        <p class="mobile-time">{{ formattedTime }} CET</p>
+        <p class="mobile-time">{{ formattedTime }} EST</p>
 
         <button class="mobile-menu-toggle" type="button" :aria-expanded="isMenuOpen" aria-controls="mobile-menu"
             @click="isMenuOpen = true">
@@ -66,7 +66,7 @@ const closeMenu = () => {
                         <a href="/portfolio/#about" class="active" @click="closeMenu">About</a>
                     </li>
                     <li><a href="/portfolio/#works" @click="closeMenu">Works</a></li>
-                    <li><a href="/portfolio/#contact" @click="closeMenu">Contact</a></li>
+                    <li><a href="/portfolio/#footer" @click="closeMenu">Contact</a></li>
                 </ul>
             </div>
 

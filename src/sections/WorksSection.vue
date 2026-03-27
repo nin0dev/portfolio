@@ -204,8 +204,8 @@ onUnmounted(() => {
     font-family: 'Druk Text Trial';
     font-size: 64px;
     color: #FF4D00;
-    line-height: 90%;
     letter-spacing: -0.05em;
+    margin-top: 0;
 }
 
 .works__grid {
