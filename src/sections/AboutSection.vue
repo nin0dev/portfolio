@@ -1,8 +1,3 @@
-<script setup>
-import { onMounted } from 'vue';
-
-onMounted
-</script>
 <template>
     <section class="about" ref="aboutRef">
         <div class="about__grid">
@@ -132,6 +127,7 @@ onMounted
     z-index: 0;
     width: 9px;
     height: 9px;
+    margin-top: -1px;
     background-color: #FF4D00;
     transition: transform 0.55s cubic-bezier(0.2, 0.9, 0.2, 1);
 }

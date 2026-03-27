@@ -141,8 +141,7 @@ h2 b {
 
 .hero__image {
     width: 100%;
-    font-size: 9vw;
-    height: 0.849em;
+    aspect-ratio: 4.12 / 1;
     background-image: url('/src/assets/images/background.png');
     background-size: cover;
     background-position: center center;
@@ -200,7 +199,7 @@ h2 b {
     }
 
     .hero__image {
-        height: clamp(66px, 6.8vw, 84px);
+        aspect-ratio: 4.4 / 1;
     }
 
     .hero__info {

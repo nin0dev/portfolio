@@ -198,6 +198,7 @@ onUnmounted(() => {
     color: #888;
     text-transform: uppercase;
     letter-spacing: 0.06em;
+    margin: 0;
 }
 
 .works__title {
