@@ -1,7 +1,8 @@
 <script setup>
 import { useHead } from '@unhead/vue'
-import Footer from '@/components/Footer.vue';
 import { onMounted } from 'vue';
+import Footer from '@/components/Footer.vue';
+import LenisScrollTrigger from '@/components/LenisScrollTrigger.vue'
 
 useHead({
     title: 'ReflexProd CRM - Project',
@@ -14,19 +15,22 @@ onMounted(() => {
 </script>
 
 <template>
-    <main class="project-page">
-        <RouterLink to="/" class="project-page__back"><- Back to home</RouterLink>
+    <LenisScrollTrigger>
+        <main class="project-page">
+            <RouterLink to="/" class="project-page__back"><- Back to home</RouterLink>
 
-                <section class="project-page__hero">
-                    <p class="project-page__tag">[ Project ]</p>
-                    <h1>ReflexProd CRM</h1>
-                    <p>
-                        A CRM-focused product build with a clean dashboard system and scalable component architecture.
-                    </p>
-                    <img src="/src/assets/images/crm-project_thumb.webp" alt="ReflexProd CRM preview" />
-                </section>
-                <Footer />
-    </main>
+                    <section class="project-page__hero">
+                        <p class="project-page__tag">[ Project ]</p>
+                        <h1>ReflexProd CRM</h1>
+                        <p>
+                            A CRM-focused product build with a clean dashboard system and scalable component
+                            architecture.
+                        </p>
+                        <img src="/src/assets/images/crm-project_thumb.webp" alt="ReflexProd CRM preview" />
+                    </section>
+                    <Footer />
+        </main>
+    </LenisScrollTrigger>
 </template>
 
 <style scoped>

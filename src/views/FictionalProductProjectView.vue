@@ -1,7 +1,8 @@
 <script setup>
 import { useHead } from '@unhead/vue'
-import Footer from '@/components/Footer.vue';
 import { onMounted } from 'vue';
+import Footer from '@/components/Footer.vue';
+import LenisScrollTrigger from '@/components/LenisScrollTrigger.vue'
 
 useHead({
     title: 'Fictional Product Showcase - Project',
@@ -14,18 +15,21 @@ onMounted(() => {
 </script>
 
 <template>
-    <main class="project-page">
-        <RouterLink to="/" class="project-page__back"><- Back to home</RouterLink>
-                <section class="project-page__hero">
-                    <p class="project-page__tag">[ Project ]</p>
-                    <h1>Fictional Product Showcase</h1>
-                    <p>
-                        A visual showcase page focused on storytelling, product framing, and smooth interactions.
-                    </p>
-                    <img src="/src/assets/images/product-project_thumb.webp" alt="Fictional Product Showcase preview" />
-                </section>
-                <Footer />
-    </main>
+    <LenisScrollTrigger>
+        <main class="project-page">
+            <RouterLink to="/" class="project-page__back"><- Back to home</RouterLink>
+                    <section class="project-page__hero">
+                        <p class="project-page__tag">[ Project ]</p>
+                        <h1>Fictional Product Showcase</h1>
+                        <p>
+                            A visual showcase page focused on storytelling, product framing, and smooth interactions.
+                        </p>
+                        <img src="/src/assets/images/product-project_thumb.webp"
+                            alt="Fictional Product Showcase preview" />
+                    </section>
+                    <Footer />
+        </main>
+    </LenisScrollTrigger>
 </template>
 
 <style scoped>
