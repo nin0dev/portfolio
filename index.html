@@ -5,6 +5,29 @@
     <link rel="icon" href="%BASE_URL%favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nino Berber – Portfolio</title>
+    <!-- Preload fonts -->
+    <link
+      rel="preload"
+      href="%BASE_URL%fonts/DrukText-Bold-Trial.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="%BASE_URL%fonts/Nohemi-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <!-- Preload CSS -->
+    <link
+      rel="preload"
+      href="%BASE_URL%assets/css/index.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="%BASE_URL%assets/css/index.css" /></noscript>
   </head>
   <body>
     <div id="app"></div>

@@ -1,17 +1,16 @@
 @font-face {
-  font-family: 'Druk Text Trial';
-  font-weight: 700;
+  font-family: 'Druk Text Trial', sans-serif;
   src:
     local('Druk Text Bold Trial'),
-    url('/src/assets/fonts/DrukText-Bold-Trial.woff') format('woff2'),
-    url('/src/assets/fonts/DrukText-Bold-Trial.otf') format('opentype');
+    url('/fonts/DrukText-Bold-Trial.woff') format('woff'),
+    url('/fonts/DrukText-Bold-Trial.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'NohemiBlack';
   src:
-    url('/src/assets/fonts/Nohemi-Light.woff2') format('woff2'),
-    url('/src/assets/fonts/Nohemi-Light.otf') format('opentype');
+    url('/fonts/Nohemi-Light.woff2') format('woff2'),
+    url('/fonts/Nohemi-Light.otf') format('opentype');
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }

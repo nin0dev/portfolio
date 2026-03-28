@@ -22,7 +22,7 @@ onMounted(() => {
                     <p>
                         A visual showcase page focused on storytelling, product framing, and smooth interactions.
                     </p>
-                    <img src="/src/assets/images/product-project_thumb.png" alt="Fictional Product Showcase preview" />
+                    <img src="/src/assets/images/product-project_thumb.webp" alt="Fictional Product Showcase preview" />
                 </section>
                 <Footer />
     </main>

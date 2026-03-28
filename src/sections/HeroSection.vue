@@ -142,7 +142,7 @@ h2 b {
 .hero__image {
     width: 100%;
     aspect-ratio: 4.12 / 1;
-    background-image: url('/src/assets/images/background3.png');
+    background-image: url('/src/assets/images/background.webp');
     transform: rotate(180deg);
     background-size: cover;
     background-position: center center;

@@ -23,7 +23,7 @@ onMounted(() => {
                     <p>
                         A CRM-focused product build with a clean dashboard system and scalable component architecture.
                     </p>
-                    <img src="/src/assets/images/crm-project_thumb.png" alt="ReflexProd CRM preview" />
+                    <img src="/src/assets/images/crm-project_thumb.webp" alt="ReflexProd CRM preview" />
                 </section>
                 <Footer />
     </main>
