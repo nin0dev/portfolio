@@ -13,6 +13,30 @@ onMounted(async () => {
     await nextTick()
 
     ctx = gsap.context(() => {
+        if (!window.matchMedia('(max-width: 768px)').matches) {
+            const split = new SplitText('.hero__title-top, .hero__title-bottom', {
+                type: 'lines',
+                mask: 'lines',
+            })
+
+            gsap.from(split.lines, {
+                yPercent: 100,
+                duration: 1,
+                ease: 'power4.out',
+                stagger: 0.1,
+                delay: 0.2,
+                opacity: 0,
+            })
+        } else {
+            gsap.from('.hero__title-top, .hero__title-bottom', {
+                opacity: 0,
+                y: 20,
+                duration: 0.8,
+                ease: 'power3.out',
+                stagger: 0.1,
+                delay: 0.2,
+            })
+        }
         const split = new SplitText('.hero__title-top, .hero__title-bottom', {
             type: 'lines',
             mask: 'lines',
@@ -233,6 +257,7 @@ h2 b {
     h2 {
         font-size: clamp(56px, 19.2vw, 68px);
         line-height: 0.88;
+        white-space: normal;
     }
 
     .hero__image-wrapper {
