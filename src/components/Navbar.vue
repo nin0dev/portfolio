@@ -34,7 +34,7 @@ const closeMenu = () => {
         <ul class="nav__list">
             <li><a href="/#about">About</a></li>
             <li><a href="/#works">Works</a></li>
-            <li><a href="/#footer">Contact</a></li>
+            <li><a href="/#footer">Schedule a call</a></li>
         </ul>
     </nav>
 
@@ -66,7 +66,7 @@ const closeMenu = () => {
                         <a href="/#about" class="active" @click="closeMenu">About</a>
                     </li>
                     <li><a href="/#works" @click="closeMenu">Works</a></li>
-                    <li><a href="/#footer" @click="closeMenu">Contact</a></li>
+                    <li><a href="/#footer" @click="closeMenu">Schedule a call</a></li>
                 </ul>
             </div>
 

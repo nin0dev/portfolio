@@ -100,7 +100,7 @@ onUnmounted(() => {
             </span>
             <span class="hero__info hero__info--skills">
                 Front-End Development<br>
-                Crafted & Animated Websites<br>
+                Headless CMS<br>
                 WordPress<br>
                 Shopify
             </span>
