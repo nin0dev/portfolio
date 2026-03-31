@@ -3,8 +3,8 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import crmThumb from '@/assets/images/crm-project_thumb.webp'
-import productThumb from '@/assets/images/product-project_thumb.webp'
+import crmThumb from '/images/crm-project_thumb.webp'
+import productThumb from '/images/product-project_thumb.webp'
 
 gsap.registerPlugin(ScrollTrigger)
 

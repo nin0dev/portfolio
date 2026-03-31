@@ -17,6 +17,6 @@ onMounted(() => {
 <template>
     <ProjectCase title="ReflexProd CRM – Project"
         description="A CRM-focused product build with a clean dashboard system and scalable component architecture."
-        :images="['/src/assets/images/crm-project_thumb.webp', '/src/assets/images/crm-project_thumb2.png', '/src/assets/images/crm-project_thumb3.png']" />
+        :images="['/images/crm-project_thumb.webp', '/images/crm-project_thumb2.png', '/images/crm-project_thumb3.png']" />
     <Footer />
 </template>

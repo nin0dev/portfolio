@@ -70,10 +70,6 @@ const initializeSwiper = () => {
             mousewheel: true,
             pagination: false,
             navigation: false,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
             autoplay: false,
             grabCursor: true,
         });

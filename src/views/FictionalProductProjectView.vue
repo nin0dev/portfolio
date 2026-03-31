@@ -16,7 +16,7 @@ onMounted(() => {
 
 <template>
     <ProjectCase title="Fictional Product"
-        :images="['/src/assets/images/product-project_thumb.webp', '/src/assets/images/product-project_thumb2.png']"
+        :images="['/images/product-project_thumb.webp', '/images/product-project_thumb2.png']"
         description="A visual showcase page focused on storytelling, product framing, and smooth interactions."
         demoLink="https://nin0dev.github.io/product-page/" :tools="['HTML', 'CSS', 'JS']" />
     <Footer />
