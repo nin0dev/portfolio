@@ -63,7 +63,7 @@ const initializeSwiper = () => {
     if (window.innerWidth > 768 && props.images.length > 0) {
         swiperInstance = new Swiper(swiperRef.value, {
             loop: true,
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
             centeredSlides: false,
             freeMode: false,
