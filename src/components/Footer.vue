@@ -1,4 +1,5 @@
-<script setup></script>
+<script setup>
+</script>
 <template>
     <footer id="footer" class="footer">
         <div class="footer__grid">
@@ -10,12 +11,18 @@
 
             <div class="footer__main">
                 <p class="footer__text">Let's work together</p>
-                <a href="https://tidycal.com/ninoberber" class="footer__cta">
+                <a href="https://cal.com/ninoberber/call" class="footer__cta">
                     <span class="cta__corner cta__corner--tl"></span>
                     <span class="cta__corner cta__corner--tr"></span>
                     <span class="cta__corner cta__corner--bl"></span>
                     <span class="cta__corner cta__corner--br"></span>
-                    <span class="cta__label">Schedule a call</span>
+                    <span class="cta__label">
+                        Schedule a call
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                            fill="currentColor">
+                            <path d="m242-246-42-42 412-412H234v-60h480v480h-60v-378L242-246Z" />
+                        </svg>
+                    </span>
                 </a>
             </div>
 
@@ -113,6 +120,11 @@
 .footer__cta:hover {
     color: #FF4D00;
     transform: scale(1.02);
+}
+
+.footer__cta svg {
+    height: .8em;
+    width: .8em;
 }
 
 .cta__corner {

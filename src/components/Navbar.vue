@@ -34,7 +34,10 @@ const closeMenu = () => {
         <ul class="nav__list">
             <li><a href="/#about">About</a></li>
             <li><a href="/#works">Works</a></li>
-            <li><a href="/#footer">Schedule a call</a></li>
+            <li><a href="https://cal.com/ninoberber/call" target="_blank">Schedule a call <svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="16px" fill="currentColor">
+                        <path d="m242-246-42-42 412-412H234v-60h480v480h-60v-378L242-246Z" />
+                    </svg></a></li>
         </ul>
     </nav>
 
@@ -66,7 +69,12 @@ const closeMenu = () => {
                         <a href="/#about" class="active" @click="closeMenu">About</a>
                     </li>
                     <li><a href="/#works" @click="closeMenu">Works</a></li>
-                    <li><a href="/#footer" @click="closeMenu">Schedule a call</a></li>
+                    <li><a href="https://cal.com/ninoberber/call" target="_blank" @click="closeMenu">Schedule a call
+                            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="48px"
+                                fill="currentColor">
+                                <path d="m242-246-42-42 412-412H234v-60h480v480h-60v-378L242-246Z" />
+                            </svg>
+                        </a></li>
                 </ul>
             </div>
 
@@ -91,7 +99,7 @@ const closeMenu = () => {
 
 .nav__list {
     display: flex;
-    align-items: center;
+    align-items: end;
     gap: 33px;
     list-style: none;
     text-transform: uppercase;
@@ -118,7 +126,7 @@ const closeMenu = () => {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 10px;
+        padding: 10px 6px 0 10px;
         margin-bottom: 6px;
         position: relative;
         z-index: 40;
