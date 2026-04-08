@@ -132,7 +132,10 @@ onBeforeUnmount(() => {
 .project-page__hero img {
     margin-top: 18px;
     width: 100%;
+    height: 100vh;
     display: block;
+    object-fit: fit;
+    object-position: top;
 }
 
 .project-demo-button {
@@ -178,6 +181,11 @@ onBeforeUnmount(() => {
 
     .swiper-container {
         display: block !important;
+    }
+
+    .project-page__hero img {
+        display: block;
+        object-fit: none;
     }
 }
 
